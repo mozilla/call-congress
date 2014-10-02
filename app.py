@@ -226,7 +226,7 @@ def connection():
 
         action = url_for("_make_calls", **params)
 
-        with resp.gather(numDigits=1, method="POST", timeout=15,
+        with resp.gather(numDigits=1, method="POST", timeout=30,
                          action=action) as g:
             play_or_say(g, campaign['msg_intro_confirm'])
 
