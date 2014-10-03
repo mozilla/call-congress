@@ -172,6 +172,8 @@ def call_user():
     # parse the info needed to make the call
     params, campaign = parse_params(request)
 
+    # return "LOL" # JL HACK ~ useful for debugging
+
     if not params or not campaign:
         abort(404)
 

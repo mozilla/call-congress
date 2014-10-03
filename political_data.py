@@ -154,6 +154,12 @@ class PoliticalData():
         # Finally, for some states we want to call a special name/number first.
         # We are going to shoehorn this data into the existing member_ids
         # paradigm and specially parse it. Super janky, but c'est la vie.
+        if campaign.get('extra_first_calls'):
+            lucky = random.choice(campaign.get('extra_first_calls'))
+            first_call = format_special_call(lucky['name'], lucky['number'])
+            member_ids.insert(0, first_call)
+
+
         if campaign.get('extra_first_call_name') and \
                 campaign.get('extra_first_call_num'):
             first_call = format_special_call(

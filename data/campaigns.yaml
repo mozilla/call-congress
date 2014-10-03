@@ -219,3 +219,49 @@
   only_call_1_rep: true
   extra_first_call_name: FCC Chairman Wheeler
   extra_first_call_num: 2024181000
+
+- id: comcastmonopoly-roundrobin
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: true
+  target_senate: false
+  target_house_first: true
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/comcast_intro_3.mp3
+  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/msg_ask_zip.mp3
+  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/msg_invalid_zip.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/comcast_call_block_intro_HACK_3.mp3
+  msg_rep_intro: http://battleforthenet.s3.amazonaws.com/audio/comcast_connect_congress.mp3
+  msg_special_call_intro: http://battleforthenet.s3.amazonaws.com/audio/comcast_connect_wheeler.mp3
+  msg_between_thanks: Thanks.
+  msg_final_thanks: http://battleforthenet.s3.amazonaws.com/audio/comcast_final_thanks.mp3
+  randomize_order: true
+  skip_star_confirm: true
+  call_human_check: false
+  only_call_1_rep: true
+  extra_first_calls:
+    - name: Daniel Alvarez
+      number: 202-418-0901
+    - name: Sagar Doshi
+      number: 202-418-0905
+    - name: Tasha Kinney
+      number: 202-418-2409
+    - name: Latoya Matthews
+      number: 202-418-1022
+    - name: Ruth Milkman
+      number: 202-418-2107
+    - name: Deborah Ridley
+      number: 202-418-1006
+    - name: Gigi Sohn
+      number: 202-418-0898
+    - name: Tom Wheeler
+      number: 202-418-1000
+  
