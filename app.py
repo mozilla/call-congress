@@ -119,7 +119,7 @@ def intro_zip_gather(params, campaign):
 
 
 def zip_gather(resp, params, campaign):
-    with resp.gather(numDigits=5, method="POST",
+    with resp.gather(numDigits=5, method="POST", timeout=30,
                      action=url_for("zip_parse", **params)) as g:
         play_or_say(g, campaign['msg_ask_zip'])
 
