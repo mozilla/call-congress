@@ -10,6 +10,8 @@ from datetime import datetime, timedelta
 import pystache
 import twilio.twiml
 
+import urllib2
+
 from flask import (abort, after_this_request, Flask, request, render_template,
                    url_for)
 from flask_cache import Cache
@@ -134,6 +136,33 @@ def make_calls(params, campaign):
     """
     resp = twilio.twiml.Response()
 
+    selection = request.values.get('Digits', '')
+
+    if selection == "1" and campaign.get('press_1_callback'):
+
+        url = pystache.render(campaign.get('press_1_callback'),
+            phone=params['userPhone'])
+        
+        callback_response = get_external_url(url)
+        print "--- EXTERNAL CALLBACK RESPONSE: %s" % callback_response
+
+        play_or_say(resp, campaign['msg_press_1'])
+
+        resp.redirect(url_for('_make_calls', **params))
+        return str(resp)
+
+    if selection == "9" and campaign.get('press_9_optout'):
+
+        url = pystache.render(campaign.get('press_9_optout'),
+            phone=params['userPhone'])
+        
+        callback_response = get_external_url(url)
+        print "--- OPT OUT RESPONSE: %s" % callback_response
+
+        play_or_say(resp, campaign['msg_opt_out'])
+
+        return str(resp)
+
     n_reps = len(params['repIds'])
 
     play_or_say(resp, campaign['msg_call_block_intro'],
@@ -142,6 +171,19 @@ def make_calls(params, campaign):
     resp.redirect(url_for('make_single_call', call_index=0, **params))
 
     return str(resp)
+
+def get_external_url(url):
+    """
+    Used to call an external URL callback, used for the press_1_callback or
+    press_9_optout to issue some kind of remote web request around the call,
+    typically used to schedule a recurring phone call at a later date, outside
+    of this app.
+    """
+    user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
+    headers = { 'User-Agent' : user_agent }
+    request = urllib2.Request(url, '', headers)
+    response = urllib2.urlopen(request).read()
+    return response
 
 
 @app.route('/make_calls', methods=call_methods)
@@ -293,6 +335,8 @@ def make_single_call():
         abort(404)
 
     resp = twilio.twiml.Response()
+
+    # return str(resp) # JL HACK ~ disable calls
 
     i = int(request.values.get('call_index', 0))
     params['call_index'] = i
