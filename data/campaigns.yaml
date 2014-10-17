@@ -284,7 +284,7 @@
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt.mp3
   msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting.mp3
-  msg_rep_intro: Now connecting you to {{name}} at the FCC.
+  msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
   msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_thanks.mp3
   press_1_callback: https://mothership.fightforthefuture.org/calls/enroll?phone_number={{phone}}&campaign_id=fcc-blanket-recurring
@@ -683,8 +683,8 @@
   target_senate: false
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro_secondary.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_secondary.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_extra.mp3
-  msg_rep_intro: Now connecting you to {{name}} at the FCC.
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting_extra.mp3
+  msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
   msg_opt_out: http://battleforthenet.s3.amazonaws.com/audio/fcc_opt_out.mp3
   press_9_optout: https://mothership.fightforthefuture.org/calls/remove?phone_number={{phone}}
