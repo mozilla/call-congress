@@ -290,382 +290,102 @@
   press_1_callback: https://queue.fightforthefuture.org/schedule_phone_call?phone_number={{phone}}&campaign_id=fcc-blanket-recurring
   call_human_check: false
   extra_first_calls:
-    - name: John Emmett
-      number: 202-418-0386
-    - name: Ashley Mims
-      number: 202-418-0939
-    - name: Rodney McDonald
-      number: 202-418-7513
-    - name: Jonathan Kraushaar
-      number: 202-418-0947
-    - name: Ryan Yates
-      number: 202-418-0886
-    - name: Jamie Susskind
-      number: 202-418-1525
+    - name: Jonathan Sallet
+      number: 202-418-2836
+      office: OGC
+    - name: Stephanie Weiner
+      number: 202-418-1752
+      office: OGC
+    - name: Jacob Lewis
+      number: 202-418-1767
+      office: OGC
+    - name: Joel Kaufman
+      number: 202-418-1758
+      office: OGC
+    - name: Michele Ellison
+      number: 202-418-1718
+      office: OGC
     - name: Mignon Clyburn
-      number: 202-418-0000
-    - name: Trent Harkrader
-      number: 202-418-2955
-    - name: Gregory Kwan
-      number: 202-418-1191
-    - name: David Bradford
-      number: 202-418-1521
-    - name: Abdel Eqab
-      number: 202-418-0863
-    - name: Todd Mitchell
-      number: 202-418-1555
-    - name: Kim Sawyers
-      number: 202-418-7084
-    - name: Rodger Woock
-      number: 202-418-1560
-    - name: Rachel Kazan
-      number: 202-418-0651
-    - name: Douglas Galbi
-      number: 202-418-1556
-    - name: Alexander Minard
-      number: 202-418-0428
-    - name: Rhonda Lien
-      number: 202-418-0918
-    - name: Erin Boone
-      number: 202-418-0736
-    - name: Don Sussman
-      number: 202-418-0629
-    - name: Douglas Slotten
-      number: 202-418-1572
-    - name: Zina Ellison
-      number: 202-418-2866
-    - name: Courtney Reinhard
-      number: 202-418-2013
-    - name: Avis Mitchell
-      number: 202-418-0316
-    - name: James Lichford
-      number: 202-418-1526
-    - name: Craig Stroup
-      number: 202-418-0989
-    - name: Elizabeth McCarthy
-      number: 202-418-1529
-    - name: Steven Rosenberg
-      number: 202-418-3614
-    - name: Gary Remondino
-      number: 202-418-2298
-    - name: Julie Veach
-      number: 202-418-1558
-    - name: Belinda Nixon
-      number: 202-418-1382
-    - name: Talmage Cox
-      number: 202-418-1029
-    - name: Dennis Johnson
-      number: 202-418-0809
-    - name: Christopher Cook
-      number: 202-418-0756
-    - name: Suzanne Yelen
-      number: 202-418-0626
-    - name: Chin Yoo
-      number: 202-418-0295
-    - name: Bryan Boyle
-      number: 202-418-7924
-    - name: Romanda Williams
-      number: 202-418-7022
-    - name: Victoria Goldberg
-      number: 202-418-7353
-    - name: James Eisner
-      number: 202-418-7302
-    - name: Paula Cech
-      number: 202-418-1551
-    - name: Richard Kwiatkowski
-      number: 202-418-1383
-    - name: Marquita Boozer
-      number: 202-418-0926
-    - name: Sanford Williams
-      number: 202-418-1508
-    - name: Jamal Mazrui
-      number: 202-418-0069
-    - name: Tracey Wilson
-      number: 202-418-1394
-    - name: Amy Goodman
-      number: 202-418-1549
-    - name: Alexis Johns
-      number: 202-418-1167
-    - name: Suzanne Mendez
-      number: 202-418-0941
-    - name: Carol Mattey
-      number: 202-418-3635
-    - name: Michelle Schaefer
-      number: 202-418-2705
-    - name: Ellen Burton
-      number: 202-418-0958
-    - name: Melanie Tiano
-      number: 202-418-2480
-    - name: Lenworth Smith
-      number: 202-418-1608
-    - name: Charles Eberle
-      number: 202-418-2248
-    - name: Myrva Charles
-      number: 202-418-1506
-    - name: Matthew Berry
-      number: 202-418-2005
-    - name: Cara Voth
-      number: 202-418-0025
-    - name: Ana Curtis
-      number: 202-418-0389
-    - name: Carmell Weathers
-      number: 202-418-2325
-    - name: Craig Glenn
-      number: 202-418-1542
-    - name: Geoff Waldau
-      number: 202-418-7379
-    - name: Kirk Burgee
-      number: 202-418-1599
-    - name: Deborah Monley
-      number: 202-418-0775
-    - name: Teresa Mozie
-      number: 202-418-0131
-    - name: Terrance Judge
-      number: 202-418-0139
-    - name: Stephen Steckler
-      number: 202-418-0865
-    - name: Latoya Toles
-      number: 202-418-1353
-    - name: Heather Hendrickson
-      number: 202-418-7295
-    - name: Ben Childers
-      number: 202-418-1418
-    - name: Vienna Jordan
-      number: 202-418-1524
-    - name: John Vu
-      number: 202-418-2333
-    - name: Linda Oliver
-      number: 202-418-1732
-    - name: Steven Funkhouser
-      number: 202-418-1533
-    - name: Crystal Ceasar
-      number: 202-418-1371
-    - name: JeanAnn Collins
-      number: 202-418-2792
-    - name: Thomas Butler
-      number: 202-418-1492
-    - name: Kesha Woodward
-      number: 202-418-1502
-    - name: Darlene Biddy
-      number: 202-418-1585
-    - name: Valery Galasso
-      number: 202-418-2400
-    - name: John Visclosky
-      number: 202-418-0825
-    - name: Adrian Wright
-      number: 202-418-0854
-    - name: John Adesalu
-      number: 202-418-7097
-    - name: Elizabeth McIntyre
-      number: 202-418-0668
-    - name: Rebekah Douglas
-      number: 202-418-7931
-    - name: Deena Shetler
-      number: 202-418-7296
-    - name: Matthew DelNero
-      number: 202-418-7433
-    - name: Priscilla Argeris
-      number: 202-418-2400
-    - name: Jeremy Miller
-      number: 202-418-1507
-    - name: Naomi Riley
-      number: 202-418-0991
-    - name: LYNNE ENGLEDOW
-      number: 202-418-2350
-    - name: Michael Jacobs
-      number: 202-418-2859
-    - name: Claudia Pabo
-      number: 202-418-1595
-    - name: Alec MacDonell
-      number: 202-418-0806
-    - name: Travis Litman
-      number: 202-418-0976
-    - name: Kristine Fargotstein
-      number: 202-418-2774
-    - name: Cathy Zima
-      number: 202-418-7380
-    - name: Lisa Gelb
-      number: 202-418-2019
+      number: 202-418-2100
+      office: Commissioner Clyburn
     - name: Adonis Hoffman
       number: 202-418-2102
-    - name: Joseph Sorresso
-      number: 202-418-7431
-    - name: Denise Coca
-      number: 202-418-0574
-    - name: Thomas Parisi
-      number: 202-418-1356
-    - name: Siobahn Philemon
-      number: 202-418-1570
-    - name: Jocelyn Frye
-      number: 202-418-0978
-    - name: Vickie Robinson
-      number: 202-418-2732
-    - name: Kimberly Jackson
-      number: 202-418-7393
-    - name: Pam Megna
-      number: 202-418-0482
-    - name: Athula Gunaratne
-      number: 202-418-0876
-    - name: Melissa Kirkel
-      number: 202-418-7958
-    - name: Michele Berlove
-      number: 202-418-1477
-    - name: Kalpak Gude
-      number: 202-418-2783
-    - name: Marilyn Jones
-      number: 202-418-2357
-    - name: William Layton
-      number: 202-418-0868
-    - name: Jay Schwarz
-      number: 202-418-0948
-    - name: Lorenzo Miller
-      number: 202-418-0846
-    - name: John Hunter
-      number: 202-418-2270
-    - name: Richard Hovey
-      number: 202-418-2582
-    - name: Jonathan Lechter
-      number: 202-418-7387
-    - name: Geneva Butler
-      number: 202-418-1559
-    - name: Eric Ralph
-      number: 202-418-0771
-    - name: Mike ORielly
-      number: 202-418-2300
-    - name: Ann Stevens
-      number: 202-418-1543
-    - name: William Dever
-      number: 202-418-1578
-    - name: Garnet Hanly
-      number: 202-418-0995
-    - name: Derian Jones
-      number: 202-418-0682
-    - name: Diana Cavenagh
-      number: 202-418-1503
-    - name: Soumitra Das
-      number: 202-418-0151
-    - name: James Bachtell
-      number: 202-418-2694
-    - name: Christopher Koves
-      number: 202-418-8209
-    - name: Jonathan Reel
-      number: 202-418-0637
-    - name: Devraj Kori
-      number: 202-418-2449
-    - name: Heidi Lankau
-      number: 202-418-2876
-    - name: Katie King
-      number: 202-418-7491
-    - name: Michelle Sclater
-      number: 202-418-0388
-    - name: Gregory Haledjian
-      number: 202-418-7440
-    - name: Cheryl Callahan
-      number: 202-418-1806
+      office: Commissioner Clyburn
+    - name: Rebekah Goodheart
+      number: 202-418-2100
+      office: Commissioner Clyburn
+    - name: Louis Peraertz
+      number: 202-418-2100
+      office: Commissioner Clyburn
+    - name: Daniel Alvarez
+      number: 202-418-1000
+      office: Chairman Wheeler
+    - name: Ruth Milkman
+      number: 202-418-2107
+      office: Chairman Wheeler
+    - name: Gigi Sohn
+      number: 202-418-0898
+      office: Chairman Wheeler
+    - name: Philip Verveer
+      number: 202-418-0897
+      office: Chairman Wheeler
+    - name: Maria Kirby
+      number: 202-418-1476
+      office: Chairman Wheeler
+    - name: Diane Cornell
+      number: 202-418-0899
+      office: Chairman Wheeler
+    - name: Renee Gregory
+      number: 202-418-0533
+      office: Chairman Wheeler
+    - name: Tom Wheeler
+      number: 202-418-1000
+      office: Chairman Wheeler
+    - name: Matthew Berry
+      number: 202-418-2005
+      office: Commissioner Pai
     - name: Nicholas Degani
       number: 202-418-2277
-    - name: Charles Tyler
-      number: 202-418-7405
-    - name: Carol Pomponio
-      number: 202-418-1898
-    - name: Natividad Persaud
-      number: 202-418-2300
-    - name: Barbara VanHagen
-      number: 202-418-0849
-    - name: Matthew Warner
-      number: 202-418-2419
-    - name: DeeAnn Smith
-      number: 202-418-2100
-    - name: Dana Bradford
-      number: 202-418-1932
-    - name: David Goldman
-      number: 202-418-2400
-    - name: Clint Odom
-      number: 202-418-2412
-    - name: Marvin Sacks
-      number: 202-418-2017
-    - name: Amy Bender
-      number: 202-418-1469
-    - name: Regina Brown
-      number: 202-418-0792
-    - name: Carol Simpson
-      number: 202-418-2391
-    - name: Octavian Carare
-      number: 202-418-7530
-    - name: Rebekah Goodheart
-      number: 202-418-1438
-    - name: Jay Bennett
-      number: 202-418-2761
+      office: Commissioner Pai
     - name: Ajit Pai
       number: 202-418-2000
-    - name: Yessenia Garcia
-      number: 202-418-1586
-    - name: Eugene Gold
-      number: 202-418-1531
-    - name: Claudia Fox
-      number: 202-418-1527
-    - name: Pamela Arluk
-      number: 202-418-1471
-    - name: Ying Ke
-      number: 202-418-0943
-    - name: Gilbert Smith
-      number: 202-418-0586
-    - name: Drema Johnson
-      number: 202-418-2101
-    - name: Patrick Halley
-      number: 202-418-7550
-    - name: Jessica Rosenworcel
-      number: 202-418-2400
-    - name: Theodore Burmeister
-      number: 202-418-7389
-    - name: Jodie May
-      number: 202-418-0913
-    - name: Radhika Karmarkar
-      number: 202-418-1523
-    - name: Cecilia Sigmund
-      number: 202-418-1588
-    - name: Erica Myers
-      number: 202-418-2429
-    - name: Larry Barnes
-      number: 202-418-1649
-    - name: David Zesiger
-      number: 202-418-2081
-    - name: Gary Seigel
-      number: 202-418-1571
-    - name: Randolph Smith
-      number: 202-418-1532
-    - name: Tim Stelzig
-      number: 202-418-0942
-    - name: Andrew Mulitz
-      number: 202-418-0827
-    - name: Christopher Sova
-      number: 202-418-1868
-    - name: Lisa Hone
-      number: 202-418-0869
-    - name: Chelsea Fallon
-      number: 202-418-7991
-    - name: Kenneth Lynch
-      number: 202-418-7356
-    - name: Susan Lee
-      number: 202-418-1590
-    - name: Robin Cohn
-      number: 202-418-2747
-    - name: Mark Nadel
-      number: 202-418-7385
-    - name: Margoux Brown
-      number: 202-418-1584
-    - name: Laura Yu
-      number: 202-418-2343
-    - name: Randy Clarke
-      number: 202-418-1587
-    - name: Mark Walker
-      number: 202-418-2668
-    - name: Deanne Erwin
-      number: 202-418-2000
-    - name: Val Brock
-      number: 202-418-0118
-    - name: Ian Forbes
-      number: 202-418-0091
+      office: Commissioner Pai
+    - name: Mike O'Rielly
+      number: 202-418-2300
+      office: Commissioner O'Rielly
+    - name: Amy Bender
+      number: 202-418-2300
+      office: Commissioner O'Rielly
+    - name: Shannon Gilson
+      number: 202-418-0505
+      office: Media Relations
+    - name: Mark Wigfield
+      number: 202-418-0253
+      office: Media Relations
+    - name: Kim Hart
+      number: 202-418-8191
+      office: Media Relations
+    - name: Jonathan Chambers
+      number: 202-418-2007
+      office: OSP
+    - name: Jon Wilkins
+      number: 202-418-8221
+      office: OSP
+    - name: Julie Veach
+      number: 202-418-1558
+      office: WCB
+    - name: Matthew Delnero
+      number: 202-418-7433
+      office: WCB
+    - name: Roger Sherman
+      number: 202-418-0656
+      office: WTB
+    - name: John Leibovitz
+      number: 202-418-0690
+      office: WTB
+    - name: Kris Moneith
+      number: 202-418-1090
+      office: CGB
 
 - id: fcc-blanket-recurring
   numbers:
@@ -690,379 +410,99 @@
   press_9_optout: https://queue.fightforthefuture.org/unschedule_phone_call?phone_number={{phone}}
   call_human_check: false
   extra_first_calls:
-    - name: John Emmett
-      number: 202-418-0386
-    - name: Ashley Mims
-      number: 202-418-0939
-    - name: Rodney McDonald
-      number: 202-418-7513
-    - name: Jonathan Kraushaar
-      number: 202-418-0947
-    - name: Ryan Yates
-      number: 202-418-0886
-    - name: Jamie Susskind
-      number: 202-418-1525
+    - name: Jonathan Sallet
+      number: 202-418-2836
+      office: OGC
+    - name: Stephanie Weiner
+      number: 202-418-1752
+      office: OGC
+    - name: Jacob Lewis
+      number: 202-418-1767
+      office: OGC
+    - name: Joel Kaufman
+      number: 202-418-1758
+      office: OGC
+    - name: Michele Ellison
+      number: 202-418-1718
+      office: OGC
     - name: Mignon Clyburn
-      number: 202-418-0000
-    - name: Trent Harkrader
-      number: 202-418-2955
-    - name: Gregory Kwan
-      number: 202-418-1191
-    - name: David Bradford
-      number: 202-418-1521
-    - name: Abdel Eqab
-      number: 202-418-0863
-    - name: Todd Mitchell
-      number: 202-418-1555
-    - name: Kim Sawyers
-      number: 202-418-7084
-    - name: Rodger Woock
-      number: 202-418-1560
-    - name: Rachel Kazan
-      number: 202-418-0651
-    - name: Douglas Galbi
-      number: 202-418-1556
-    - name: Alexander Minard
-      number: 202-418-0428
-    - name: Rhonda Lien
-      number: 202-418-0918
-    - name: Erin Boone
-      number: 202-418-0736
-    - name: Don Sussman
-      number: 202-418-0629
-    - name: Douglas Slotten
-      number: 202-418-1572
-    - name: Zina Ellison
-      number: 202-418-2866
-    - name: Courtney Reinhard
-      number: 202-418-2013
-    - name: Avis Mitchell
-      number: 202-418-0316
-    - name: James Lichford
-      number: 202-418-1526
-    - name: Craig Stroup
-      number: 202-418-0989
-    - name: Elizabeth McCarthy
-      number: 202-418-1529
-    - name: Steven Rosenberg
-      number: 202-418-3614
-    - name: Gary Remondino
-      number: 202-418-2298
-    - name: Julie Veach
-      number: 202-418-1558
-    - name: Belinda Nixon
-      number: 202-418-1382
-    - name: Talmage Cox
-      number: 202-418-1029
-    - name: Dennis Johnson
-      number: 202-418-0809
-    - name: Christopher Cook
-      number: 202-418-0756
-    - name: Suzanne Yelen
-      number: 202-418-0626
-    - name: Chin Yoo
-      number: 202-418-0295
-    - name: Bryan Boyle
-      number: 202-418-7924
-    - name: Romanda Williams
-      number: 202-418-7022
-    - name: Victoria Goldberg
-      number: 202-418-7353
-    - name: James Eisner
-      number: 202-418-7302
-    - name: Paula Cech
-      number: 202-418-1551
-    - name: Richard Kwiatkowski
-      number: 202-418-1383
-    - name: Marquita Boozer
-      number: 202-418-0926
-    - name: Sanford Williams
-      number: 202-418-1508
-    - name: Jamal Mazrui
-      number: 202-418-0069
-    - name: Tracey Wilson
-      number: 202-418-1394
-    - name: Amy Goodman
-      number: 202-418-1549
-    - name: Alexis Johns
-      number: 202-418-1167
-    - name: Suzanne Mendez
-      number: 202-418-0941
-    - name: Carol Mattey
-      number: 202-418-3635
-    - name: Michelle Schaefer
-      number: 202-418-2705
-    - name: Ellen Burton
-      number: 202-418-0958
-    - name: Melanie Tiano
-      number: 202-418-2480
-    - name: Lenworth Smith
-      number: 202-418-1608
-    - name: Charles Eberle
-      number: 202-418-2248
-    - name: Myrva Charles
-      number: 202-418-1506
-    - name: Matthew Berry
-      number: 202-418-2005
-    - name: Cara Voth
-      number: 202-418-0025
-    - name: Ana Curtis
-      number: 202-418-0389
-    - name: Carmell Weathers
-      number: 202-418-2325
-    - name: Craig Glenn
-      number: 202-418-1542
-    - name: Geoff Waldau
-      number: 202-418-7379
-    - name: Kirk Burgee
-      number: 202-418-1599
-    - name: Deborah Monley
-      number: 202-418-0775
-    - name: Teresa Mozie
-      number: 202-418-0131
-    - name: Terrance Judge
-      number: 202-418-0139
-    - name: Stephen Steckler
-      number: 202-418-0865
-    - name: Latoya Toles
-      number: 202-418-1353
-    - name: Heather Hendrickson
-      number: 202-418-7295
-    - name: Ben Childers
-      number: 202-418-1418
-    - name: Vienna Jordan
-      number: 202-418-1524
-    - name: John Vu
-      number: 202-418-2333
-    - name: Linda Oliver
-      number: 202-418-1732
-    - name: Steven Funkhouser
-      number: 202-418-1533
-    - name: Crystal Ceasar
-      number: 202-418-1371
-    - name: JeanAnn Collins
-      number: 202-418-2792
-    - name: Thomas Butler
-      number: 202-418-1492
-    - name: Kesha Woodward
-      number: 202-418-1502
-    - name: Darlene Biddy
-      number: 202-418-1585
-    - name: Valery Galasso
-      number: 202-418-2400
-    - name: John Visclosky
-      number: 202-418-0825
-    - name: Adrian Wright
-      number: 202-418-0854
-    - name: John Adesalu
-      number: 202-418-7097
-    - name: Elizabeth McIntyre
-      number: 202-418-0668
-    - name: Rebekah Douglas
-      number: 202-418-7931
-    - name: Deena Shetler
-      number: 202-418-7296
-    - name: Matthew DelNero
-      number: 202-418-7433
-    - name: Priscilla Argeris
-      number: 202-418-2400
-    - name: Jeremy Miller
-      number: 202-418-1507
-    - name: Naomi Riley
-      number: 202-418-0991
-    - name: LYNNE ENGLEDOW
-      number: 202-418-2350
-    - name: Michael Jacobs
-      number: 202-418-2859
-    - name: Claudia Pabo
-      number: 202-418-1595
-    - name: Alec MacDonell
-      number: 202-418-0806
-    - name: Travis Litman
-      number: 202-418-0976
-    - name: Kristine Fargotstein
-      number: 202-418-2774
-    - name: Cathy Zima
-      number: 202-418-7380
-    - name: Lisa Gelb
-      number: 202-418-2019
+      number: 202-418-2100
+      office: Commissioner Clyburn
     - name: Adonis Hoffman
       number: 202-418-2102
-    - name: Joseph Sorresso
-      number: 202-418-7431
-    - name: Denise Coca
-      number: 202-418-0574
-    - name: Thomas Parisi
-      number: 202-418-1356
-    - name: Siobahn Philemon
-      number: 202-418-1570
-    - name: Jocelyn Frye
-      number: 202-418-0978
-    - name: Vickie Robinson
-      number: 202-418-2732
-    - name: Kimberly Jackson
-      number: 202-418-7393
-    - name: Pam Megna
-      number: 202-418-0482
-    - name: Athula Gunaratne
-      number: 202-418-0876
-    - name: Melissa Kirkel
-      number: 202-418-7958
-    - name: Michele Berlove
-      number: 202-418-1477
-    - name: Kalpak Gude
-      number: 202-418-2783
-    - name: Marilyn Jones
-      number: 202-418-2357
-    - name: William Layton
-      number: 202-418-0868
-    - name: Jay Schwarz
-      number: 202-418-0948
-    - name: Lorenzo Miller
-      number: 202-418-0846
-    - name: John Hunter
-      number: 202-418-2270
-    - name: Richard Hovey
-      number: 202-418-2582
-    - name: Jonathan Lechter
-      number: 202-418-7387
-    - name: Geneva Butler
-      number: 202-418-1559
-    - name: Eric Ralph
-      number: 202-418-0771
-    - name: Mike ORielly
-      number: 202-418-2300
-    - name: Ann Stevens
-      number: 202-418-1543
-    - name: William Dever
-      number: 202-418-1578
-    - name: Garnet Hanly
-      number: 202-418-0995
-    - name: Derian Jones
-      number: 202-418-0682
-    - name: Diana Cavenagh
-      number: 202-418-1503
-    - name: Soumitra Das
-      number: 202-418-0151
-    - name: James Bachtell
-      number: 202-418-2694
-    - name: Christopher Koves
-      number: 202-418-8209
-    - name: Jonathan Reel
-      number: 202-418-0637
-    - name: Devraj Kori
-      number: 202-418-2449
-    - name: Heidi Lankau
-      number: 202-418-2876
-    - name: Katie King
-      number: 202-418-7491
-    - name: Michelle Sclater
-      number: 202-418-0388
-    - name: Gregory Haledjian
-      number: 202-418-7440
-    - name: Cheryl Callahan
-      number: 202-418-1806
+      office: Commissioner Clyburn
+    - name: Rebekah Goodheart
+      number: 202-418-2100
+      office: Commissioner Clyburn
+    - name: Louis Peraertz
+      number: 202-418-2100
+      office: Commissioner Clyburn
+    - name: Daniel Alvarez
+      number: 202-418-1000
+      office: Chairman Wheeler
+    - name: Ruth Milkman
+      number: 202-418-2107
+      office: Chairman Wheeler
+    - name: Gigi Sohn
+      number: 202-418-0898
+      office: Chairman Wheeler
+    - name: Philip Verveer
+      number: 202-418-0897
+      office: Chairman Wheeler
+    - name: Maria Kirby
+      number: 202-418-1476
+      office: Chairman Wheeler
+    - name: Diane Cornell
+      number: 202-418-0899
+      office: Chairman Wheeler
+    - name: Renee Gregory
+      number: 202-418-0533
+      office: Chairman Wheeler
+    - name: Tom Wheeler
+      number: 202-418-1000
+      office: Chairman Wheeler
+    - name: Matthew Berry
+      number: 202-418-2005
+      office: Commissioner Pai
     - name: Nicholas Degani
       number: 202-418-2277
-    - name: Charles Tyler
-      number: 202-418-7405
-    - name: Carol Pomponio
-      number: 202-418-1898
-    - name: Natividad Persaud
-      number: 202-418-2300
-    - name: Barbara VanHagen
-      number: 202-418-0849
-    - name: Matthew Warner
-      number: 202-418-2419
-    - name: DeeAnn Smith
-      number: 202-418-2100
-    - name: Dana Bradford
-      number: 202-418-1932
-    - name: David Goldman
-      number: 202-418-2400
-    - name: Clint Odom
-      number: 202-418-2412
-    - name: Marvin Sacks
-      number: 202-418-2017
-    - name: Amy Bender
-      number: 202-418-1469
-    - name: Regina Brown
-      number: 202-418-0792
-    - name: Carol Simpson
-      number: 202-418-2391
-    - name: Octavian Carare
-      number: 202-418-7530
-    - name: Rebekah Goodheart
-      number: 202-418-1438
-    - name: Jay Bennett
-      number: 202-418-2761
+      office: Commissioner Pai
     - name: Ajit Pai
       number: 202-418-2000
-    - name: Yessenia Garcia
-      number: 202-418-1586
-    - name: Eugene Gold
-      number: 202-418-1531
-    - name: Claudia Fox
-      number: 202-418-1527
-    - name: Pamela Arluk
-      number: 202-418-1471
-    - name: Ying Ke
-      number: 202-418-0943
-    - name: Gilbert Smith
-      number: 202-418-0586
-    - name: Drema Johnson
-      number: 202-418-2101
-    - name: Patrick Halley
-      number: 202-418-7550
-    - name: Jessica Rosenworcel
-      number: 202-418-2400
-    - name: Theodore Burmeister
-      number: 202-418-7389
-    - name: Jodie May
-      number: 202-418-0913
-    - name: Radhika Karmarkar
-      number: 202-418-1523
-    - name: Cecilia Sigmund
-      number: 202-418-1588
-    - name: Erica Myers
-      number: 202-418-2429
-    - name: Larry Barnes
-      number: 202-418-1649
-    - name: David Zesiger
-      number: 202-418-2081
-    - name: Gary Seigel
-      number: 202-418-1571
-    - name: Randolph Smith
-      number: 202-418-1532
-    - name: Tim Stelzig
-      number: 202-418-0942
-    - name: Andrew Mulitz
-      number: 202-418-0827
-    - name: Christopher Sova
-      number: 202-418-1868
-    - name: Lisa Hone
-      number: 202-418-0869
-    - name: Chelsea Fallon
-      number: 202-418-7991
-    - name: Kenneth Lynch
-      number: 202-418-7356
-    - name: Susan Lee
-      number: 202-418-1590
-    - name: Robin Cohn
-      number: 202-418-2747
-    - name: Mark Nadel
-      number: 202-418-7385
-    - name: Margoux Brown
-      number: 202-418-1584
-    - name: Laura Yu
-      number: 202-418-2343
-    - name: Randy Clarke
-      number: 202-418-1587
-    - name: Mark Walker
-      number: 202-418-2668
-    - name: Deanne Erwin
-      number: 202-418-2000
-    - name: Val Brock
-      number: 202-418-0118
-    - name: Ian Forbes
-      number: 202-418-0091
+      office: Commissioner Pai
+    - name: Mike O'Rielly
+      number: 202-418-2300
+      office: Commissioner O'Rielly
+    - name: Amy Bender
+      number: 202-418-2300
+      office: Commissioner O'Rielly
+    - name: Shannon Gilson
+      number: 202-418-0505
+      office: Media Relations
+    - name: Mark Wigfield
+      number: 202-418-0253
+      office: Media Relations
+    - name: Kim Hart
+      number: 202-418-8191
+      office: Media Relations
+    - name: Jonathan Chambers
+      number: 202-418-2007
+      office: OSP
+    - name: Jon Wilkins
+      number: 202-418-8221
+      office: OSP
+    - name: Julie Veach
+      number: 202-418-1558
+      office: WCB
+    - name: Matthew Delnero
+      number: 202-418-7433
+      office: WCB
+    - name: Roger Sherman
+      number: 202-418-0656
+      office: WTB
+    - name: John Leibovitz
+      number: 202-418-0690
+      office: WTB
+    - name: Kris Moneith
+      number: 202-418-1090
+      office: CGB
