@@ -515,12 +515,12 @@
     - 262-725-0171
   target_house: false
   target_senate: false
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/obama_intro.mp3
-  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/obama_prompt.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/obama_connecting.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/obama_intro_2.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/obama_prompt_2.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/obama_connecting_2.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
-  msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/obama_prompt_thanks.mp3
+  msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/obama_prompt_thanks_2.mp3
   press_1_callback: https://queue.fightforthefuture.org/schedule_phone_call?phone_number={{phone}}&campaign_id=whitehouse-blanket-recurring
   call_human_check: false
   extra_first_calls:
@@ -602,12 +602,12 @@
     - 262-725-0171
   target_house: false
   target_senate: false
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/obama_intro_secondary.mp3
-  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/obama_prompt_secondary.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/obama_connecting.mp3
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/obama_intro_secondary_2.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/obama_prompt_secondary_2.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/obama_connecting_2.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
-  msg_opt_out: http://battleforthenet.s3.amazonaws.com/audio/obama_opt_out.mp3
+  msg_opt_out: http://battleforthenet.s3.amazonaws.com/audio/obama_opt_out_2.mp3
   press_9_optout: https://queue.fightforthefuture.org/unschedule_phone_call?phone_number={{phone}}
   call_human_check: false
   extra_first_calls:
