@@ -524,13 +524,7 @@
   press_1_callback: https://queue.fightforthefuture.org/schedule_phone_call?phone_number={{phone}}&campaign_id=whitehouse-blanket-recurring
   call_human_check: false
   extra_first_calls:
-    - name: Office of the President
-      number: 202-456-3737
-      office: OGC
     - name: Chief of Staff Denis McDonough
-      number: 202-456-6798
-      office: OGC
-    - name: Chief of Staff to the Chief of Staff Emmet Beliveau
       number: 202-456-3737
       office: OGC
     - name: Director Domestic Policy Council Cecillia Munoz
@@ -538,9 +532,6 @@
       office: OGC
     - name: Valerie Jarrett
       number: 202-456-1097
-      office: Commissioner Clyburn
-    - name: Peter Rouse
-      number: 202-456-3737
       office: Commissioner Clyburn
     - name: Press Secretary
       number: 202-456-3282
@@ -550,12 +541,6 @@
       office: Commissioner Clyburn
     - name: Director of scheduling
       number: 202-395-6890
-      office: Chairman Wheeler
-    - name: Office of the Vice President
-      number: 202-456-9000
-      office: Chairman Wheeler
-    - name: VP Chief of Staff
-      number: 202-456-2420
       office: Chairman Wheeler
     - name: Secretary of Commerce Penny Pritzker
       number: 202-482-2112
@@ -572,21 +557,12 @@
     - name: Council of Economic Advisers
       number: 202-395-5084
       office: Chairman Wheeler
-    - name: Domestic Policy Council
-      number: 202-395-5750
-      office: Commissioner Pai
     - name: National Economic Council
       number: 202-456-5594
       office: Commissioner Pai
     - name: Office of Administration
       number: 202-456-2861
       office: Commissioner Pai
-    - name: Office of Science and Technology Policy
-      number: 202-395-4444
-      office: Commissioner O'Rielly
-    - name: Chairman of the council of economic advisers
-      number: 202-395-5042
-      office: Commissioner O'Rielly
 
 - id: whitehouse-blanket-recurring
   numbers:
@@ -611,13 +587,7 @@
   press_9_optout: https://queue.fightforthefuture.org/unschedule_phone_call?phone_number={{phone}}
   call_human_check: false
   extra_first_calls:
-    - name: Office of the President
-      number: 202-456-3737
-      office: OGC
     - name: Chief of Staff Denis McDonough
-      number: 202-456-6798
-      office: OGC
-    - name: Chief of Staff to the Chief of Staff Emmet Beliveau
       number: 202-456-3737
       office: OGC
     - name: Director Domestic Policy Council Cecillia Munoz
@@ -625,9 +595,6 @@
       office: OGC
     - name: Valerie Jarrett
       number: 202-456-1097
-      office: Commissioner Clyburn
-    - name: Peter Rouse
-      number: 202-456-3737
       office: Commissioner Clyburn
     - name: Press Secretary
       number: 202-456-3282
@@ -637,12 +604,6 @@
       office: Commissioner Clyburn
     - name: Director of scheduling
       number: 202-395-6890
-      office: Chairman Wheeler
-    - name: Office of the Vice President
-      number: 202-456-9000
-      office: Chairman Wheeler
-    - name: VP Chief of Staff
-      number: 202-456-2420
       office: Chairman Wheeler
     - name: Secretary of Commerce Penny Pritzker
       number: 202-482-2112
@@ -659,18 +620,9 @@
     - name: Council of Economic Advisers
       number: 202-395-5084
       office: Chairman Wheeler
-    - name: Domestic Policy Council
-      number: 202-395-5750
-      office: Commissioner Pai
     - name: National Economic Council
       number: 202-456-5594
       office: Commissioner Pai
     - name: Office of Administration
       number: 202-456-2861
       office: Commissioner Pai
-    - name: Office of Science and Technology Policy
-      number: 202-395-4444
-      office: Commissioner O'Rielly
-    - name: Chairman of the council of economic advisers
-      number: 202-395-5042
-      office: Commissioner O'Rielly
