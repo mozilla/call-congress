@@ -76,6 +76,9 @@ def parse_params(r):
         'zipcode': r.values.get('zipcode', None),
         'repIds': r.values.getlist('repIds'),
 
+        # only used for campaigns of infinite_loop
+        'saved_zipcode': r.values.get('saved_zipcode', None),
+
         # optional values for Fight for the Future Leaderboards
         # if present, these add extra logging functionality in call_complete
         'fftfCampaign': r.values.get('fftfCampaign'),
@@ -101,6 +104,10 @@ def parse_params(r):
         params['repIds'] = data.locate_member_ids(
             params['zipcode'], campaign)
 
+        if campaign.get('infinite_loop', False) == True:
+            print "Saving zipcode for the future lol"
+            params['saved_zipcode'] = params['zipcode']
+
         # delete the zipcode, since the repIds are in a particular order and
         # will be passed around from endpoint to endpoint hereafter anyway.
         del params['zipcode']
@@ -108,6 +115,8 @@ def parse_params(r):
     if 'random_choice' in campaign:
         # pick a random choice among a selected set of members
         params['repIds'] = [random.choice(campaign['random_choice'])]
+
+    print params
 
     return params, campaign
 
@@ -393,7 +402,18 @@ def call_complete():
 
     i = int(request.values.get('call_index', 0))
 
-    if i == len(params['repIds']) - 1:
+    print "infinite loop"
+    print campaign.get('infinite_loop')
+    print "saved_zipcode"
+    print params['saved_zipcode']
+
+    if campaign.get('infinite_loop') and params['saved_zipcode']:
+        params['zipcode'] = params['saved_zipcode']
+        del params['saved_zipcode']
+        del params['repIds']
+        resp.redirect(url_for('make_single_call', **params))
+
+    elif i == len(params['repIds']) - 1:
         # thank you for calling message
         play_or_say(resp, campaign['msg_final_thanks'])
 

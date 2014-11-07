@@ -523,91 +523,74 @@
   msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/obama_prompt_thanks_2.mp3
   press_1_callback: https://queue.fightforthefuture.org/schedule_phone_call?phone_number={{phone}}&campaign_id=whitehouse-blanket-recurring
   call_human_check: false
+  infinite_loop: true
   extra_first_calls:
     - name: Chief of Staff Denis McDonough
       number: 202-456-3737
-      office: OGC
     - name: Director Domestic Policy Council Cecillia Munoz
       number: 202-456-5594
-      office: OGC
     - name: Valerie Jarrett
       number: 202-456-1097
-      office: Commissioner Clyburn
     - name: Press Secretary
       number: 202-456-3282
-      office: Commissioner Clyburn
     - name: General Counsel
       number: 202-456-2632
-      office: Commissioner Clyburn
     - name: Director of scheduling
       number: 202-395-6890
-      office: Chairman Wheeler
     - name: Secretary of Commerce Penny Pritzker
       number: 202-482-2112
-      office: Chairman Wheeler
     - name: Deputy Secretary of Commerce Bruce H. Andrews
       number: 202-482-8376
-      office: Chairman Wheeler
     - name: Chief of Staff to the Secretary Wendy R. Anderson
       number: 202-482-4246
-      office: Chairman Wheeler
     - name: Office of the First Lady
       number: 202-456-7064
-      office: Chairman Wheeler
     - name: Council of Economic Advisers
       number: 202-395-5084
-      office: Chairman Wheeler
     - name: National Economic Council
       number: 202-456-5594
-      office: Commissioner Pai
     - name: Office of Administration
       number: 202-456-2861
-      office: Commissioner Pai
     - name: Legislative Affairs
       number: 202-456-2230
-      office: Commissioner Pai
     - name: Management and Administration
       number: 202-456-5400
-      office: Commissioner Pai
     - name: Political Affairs
       number: 202-456-6257
-      office: Commissioner Pai
     - name: Staff Secretary
       number: 202-456-2702
-      office: Commissioner Pai
     - name: Vice Presidents Operations Office
       number: 202-456-6770
-      office: Commissioner Pai
     - name: Vice President Scheduling
       number: 202-456-6773
-      office: Commissioner Pai
     - name: White House Operations
       number: 202-456-2500
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-3241
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-7458
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-3460
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-2744
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-1723
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-0373
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-1540
-      office: Commissioner Pai
     - name: office of management and budget
       number: 202-395-4840
-      office: Commissioner Pai
+    - name: neighborhood partnerships
+      number: 202-456-3394
+    - name: cabinet secretary
+      number: 202-456-2572
+    - name: legislative affairs
+      number: 202-456-6620
+    - name: media affairs
+      number: 202-456-6238
+    - name: scheduling
+      number: 202-456-5325
 
 
 - id: whitehouse-blanket-recurring
@@ -632,88 +615,71 @@
   msg_opt_out: http://battleforthenet.s3.amazonaws.com/audio/obama_opt_out_2.mp3
   press_9_optout: https://queue.fightforthefuture.org/unschedule_phone_call?phone_number={{phone}}
   call_human_check: false
+  infinite_loop: true
   extra_first_calls:
     - name: Chief of Staff Denis McDonough
       number: 202-456-3737
-      office: OGC
     - name: Director Domestic Policy Council Cecillia Munoz
       number: 202-456-5594
-      office: OGC
     - name: Valerie Jarrett
       number: 202-456-1097
-      office: Commissioner Clyburn
     - name: Press Secretary
       number: 202-456-3282
-      office: Commissioner Clyburn
     - name: General Counsel
       number: 202-456-2632
-      office: Commissioner Clyburn
     - name: Director of scheduling
       number: 202-395-6890
-      office: Chairman Wheeler
     - name: Secretary of Commerce Penny Pritzker
       number: 202-482-2112
-      office: Chairman Wheeler
     - name: Deputy Secretary of Commerce Bruce H. Andrews
       number: 202-482-8376
-      office: Chairman Wheeler
     - name: Chief of Staff to the Secretary Wendy R. Anderson
       number: 202-482-4246
-      office: Chairman Wheeler
     - name: Office of the First Lady
       number: 202-456-7064
-      office: Chairman Wheeler
     - name: Council of Economic Advisers
       number: 202-395-5084
-      office: Chairman Wheeler
     - name: National Economic Council
       number: 202-456-5594
-      office: Commissioner Pai
     - name: Office of Administration
       number: 202-456-2861
-      office: Commissioner Pai
     - name: Legislative Affairs
       number: 202-456-2230
-      office: Commissioner Pai
     - name: Management and Administration
       number: 202-456-5400
-      office: Commissioner Pai
     - name: Political Affairs
       number: 202-456-6257
-      office: Commissioner Pai
     - name: Staff Secretary
       number: 202-456-2702
-      office: Commissioner Pai
     - name: Vice Presidents Operations Office
       number: 202-456-6770
-      office: Commissioner Pai
     - name: Vice President Scheduling
       number: 202-456-6773
-      office: Commissioner Pai
     - name: White House Operations
       number: 202-456-2500
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-3241
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-7458
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-3460
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-2744
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-1723
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-0373
-      office: Commissioner Pai
     - name: vice presidents office
       number: 202-456-1540
-      office: Commissioner Pai
     - name: office of management and budget
       number: 202-395-4840
-      office: Commissioner Pai
+    - name: neighborhood partnerships
+      number: 202-456-3394
+    - name: cabinet secretary
+      number: 202-456-2572
+    - name: legislative affairs
+      number: 202-456-6620
+    - name: media affairs
+      number: 202-456-6238
+    - name: scheduling
+      number: 202-456-5325
