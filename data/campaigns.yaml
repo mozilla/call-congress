@@ -591,6 +591,10 @@
       number: 202-456-6238
     - name: scheduling
       number: 202-456-5325
+    - name: domestic policy council
+      number: 202-456-6515
+    - name: office of administration directors office
+      number: 202-456-2861
 
 
 - id: whitehouse-blanket-recurring
@@ -683,3 +687,7 @@
       number: 202-456-6238
     - name: scheduling
       number: 202-456-5325
+    - name: domestic policy council
+      number: 202-456-6515
+    - name: office of administration directors office
+      number: 202-456-2861
