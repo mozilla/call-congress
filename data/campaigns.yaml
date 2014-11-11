@@ -283,7 +283,7 @@
   target_senate: false
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_2.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting_new.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
   msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_thanks.mp3
@@ -400,7 +400,7 @@
   target_senate: false
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro_secondary.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/fcc_prompt_secondary.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting_extra.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting_new.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
   msg_opt_out: http://battleforthenet.s3.amazonaws.com/audio/fcc_opt_out.mp3
