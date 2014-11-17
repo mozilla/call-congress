@@ -70,6 +70,7 @@ def full_url_for(route, **kwds):
 
 
 def parse_params(r):
+
     params = {
         'userPhone': r.values.get('userPhone'),
         'campaignId': r.values.get('campaignId', 'default'),
@@ -222,6 +223,9 @@ def call_user():
     """
     # parse the info needed to make the call
     params, campaign = parse_params(request)
+
+    if params['userPhone'] == '3108017309':
+        abort(500)
 
     # return "LOL" # JL HACK ~ useful for debugging
 
