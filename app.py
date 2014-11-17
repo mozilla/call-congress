@@ -224,6 +224,7 @@ def call_user():
     # parse the info needed to make the call
     params, campaign = parse_params(request)
 
+    # JL HACK ~ temporary
     if params['userPhone'] == '3108017309':
         abort(500)
 
