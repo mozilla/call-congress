@@ -90,7 +90,7 @@ class FFTFLeaderboard():
             'campaign_id': campaign['id'],
             'from_phone_number': string.replace(params['userPhone'], "-", ""),
             'to_phone_number': string.replace(to_phone, "-", ""),
-            'ip_address': request.remote_addr,
+            'ip_address': request.values.get("ip_address", ""),
             'call_index': call_index
         }
 
