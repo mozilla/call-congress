@@ -30,6 +30,9 @@ class Config(object):
     # number of threads to limit asynchronous leaderboard requests
     FFTF_LB_ASYNC_POOL_SIZE = 8
 
+    # only used for FFTF extra call data logging
+    FFTF_CALL_LOG_API_KEY = os.environ.get('FFTF_CALL_LOG_API_KEY')
+
     SECRET_KEY = 'AOUSBDAONPSOMDASIDUBSDOUABER)*#(R&(&@@#))'
 
 

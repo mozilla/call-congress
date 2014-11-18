@@ -1,15 +1,19 @@
 import hashlib
 import json
 import grequests
+import string
 
 class FFTFLeaderboard():
 
     debug_mode = False
     pool_size = 1
+    api_key = None
 
-    def __init__(self, debug_mode, pool_size):
+    def __init__(self, debug_mode, pool_size, api_key):
 
         self.debug_mode = debug_mode
+        self.pool_size = pool_size
+        self.api_key = api_key
 
     def log_call(self, params, campaign, request):
 
@@ -68,6 +72,32 @@ class FFTFLeaderboard():
             print "FFTF Leaderboard sending: %s" % data
 
         url = 'https://leaderboard.fightforthefuture.org/log'
+        req = grequests.post(url, data=data, hooks=dict(response=finished))
+        job = grequests.send(req, grequests.Pool(self.pool_size))
+
+        return
+
+    def log_extra_data(self, params, campaign, request, to_phone, call_index):
+
+        debug_mode = self.debug_mode
+
+        def finished(res, **kwargs):
+            if debug_mode:
+                print "FFTF Extra Data log call complete: %s" % res
+
+        data = {
+            'key': self.api_key,
+            'campaign_id': campaign['id'],
+            'from_phone_number': string.replace(params['userPhone'], "-", ""),
+            'to_phone_number': string.replace(to_phone, "-", ""),
+            'ip_address': request.remote_addr,
+            'call_index': call_index
+        }
+
+        if self.debug_mode:
+            print "FFTF Log Extra Data sending: %s" % data
+
+        url = 'https://queue.fightforthefuture.org/log_phone_call'
         req = grequests.post(url, data=data, hooks=dict(response=finished))
         job = grequests.send(req, grequests.Pool(self.pool_size))
 

@@ -39,7 +39,8 @@ db.init_app(app)
 cache_handler = CacheHandler(app.config['REDIS_URL'])
 
 # FFTF Leaderboard handler. Only used if FFTF Leadboard params are passed in
-leaderboard = FFTFLeaderboard(app.debug, app.config['FFTF_LB_ASYNC_POOL_SIZE'])
+leaderboard = FFTFLeaderboard(app.debug, app.config['FFTF_LB_ASYNC_POOL_SIZE'],
+    app.config['FFTF_CALL_LOG_API_KEY'])
 
 call_methods = ['GET', 'POST']
 
@@ -377,6 +378,9 @@ def make_single_call():
                 resp, campaign['msg_repo_intro_voted_with'], name=full_name)
         else:
             play_or_say(resp, campaign['msg_rep_intro'], name=full_name)
+
+    if campaign.get('fftf_log_extra_data'):
+        leaderboard.log_extra_data(params, campaign, request, to_phone, i)
 
     if app.debug:
         print u'DEBUG: Call #{}, {} ({}) from {} : make_single_call()'.format(i,
