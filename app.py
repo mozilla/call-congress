@@ -81,7 +81,7 @@ def parse_params(r):
         # only used for campaigns of infinite_loop
         'saved_zipcode': r.values.get('saved_zipcode', None),
 
-        'ip_address': r.values.get('ip_address', r.remote_addr),
+        'ip_address': r.values.get('ip_address', None),
 
         # optional values for Fight for the Future Leaderboards
         # if present, these add extra logging functionality in call_complete
@@ -115,6 +115,9 @@ def parse_params(r):
         # delete the zipcode, since the repIds are in a particular order and
         # will be passed around from endpoint to endpoint hereafter anyway.
         del params['zipcode']
+
+    if params['ip_address'] == None:
+        params['ip_address'] = r.headers.get('x-forwarded-for', r.remote_addr)
 
     if 'random_choice' in campaign:
         # pick a random choice among a selected set of members
