@@ -119,6 +119,10 @@ def parse_params(r):
     if params['ip_address'] == None:
         params['ip_address'] = r.headers.get('x-forwarded-for', r.remote_addr)
 
+        if "," in params['ip_address']:
+            ips = params['ip_address'].split(", ")
+            params['ip_address'] = ips[len(ips)-1]
+
     if 'random_choice' in campaign:
         # pick a random choice among a selected set of members
         params['repIds'] = [random.choice(campaign['random_choice'])]
