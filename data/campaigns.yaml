@@ -290,6 +290,7 @@
   press_1_callback: https://queue.fightforthefuture.org/schedule_phone_call?phone_number={{phone}}&campaign_id=fcc-blanket-recurring
   call_human_check: false
   fftf_log_extra_data: true
+  infinite_loop: true
   extra_first_calls:
     - name: Jonathan Sallet
       number: 202-418-2836
@@ -408,6 +409,7 @@
   press_9_optout: https://queue.fightforthefuture.org/unschedule_phone_call?phone_number={{phone}}
   call_human_check: false
   fftf_log_extra_data: true
+  infinite_loop: true
   extra_first_calls:
     - name: Jonathan Sallet
       number: 202-418-2836
