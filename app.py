@@ -127,6 +127,8 @@ def parse_params(r):
         # pick a random choice among a selected set of members
         params['repIds'] = [random.choice(campaign['random_choice'])]
 
+    print "X-forwarded-for"
+    print r.headers.get('x-forwarded-for', "NOPE")
     print params
 
     return params, campaign
