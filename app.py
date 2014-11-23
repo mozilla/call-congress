@@ -75,7 +75,7 @@ def full_url_for(route, **kwds):
 def parse_params(r):
 
     params = {
-        'userPhone': r.values.get('userPhone').replace('-', ''),
+        'userPhone': r.values.get('userPhone'),
         'campaignId': r.values.get('campaignId', 'default'),
         'zipcode': r.values.get('zipcode', None),
         'repIds': r.values.getlist('repIds'),
@@ -104,6 +104,9 @@ def parse_params(r):
             params['repIds'] = [campaign['repIds']]
         else:
             params['repIds'] = campaign['repIds']
+
+    if params['userPhone']:
+        params['userPhone'] = params['userPhone'].replace('-', '')
 
     # get representative's id by zip code
     if params['zipcode']:
