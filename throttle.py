@@ -27,6 +27,7 @@ class Throttle():
 
         flag_number = 0
         flag_ip = 0
+        is_whitelisted = 0
 
         qry = ("SELECT count(id) FROM _ms_call_throttle WHERE "
                "create_date >= NOW() - '1 day'::INTERVAL "
@@ -46,20 +47,23 @@ class Throttle():
         if recent_ip_address[0] > 1:
             flag_ip = 1
 
+        if override == os.environ.get('THROTTLE_OVERRIDE_KEY'):
+            flag_ip = 0
+            flag_number = 0
+            is_whitelisted = 1
+
         cur.execute(("INSERT INTO _ms_call_throttle "
-                     "      (campaign_id, from_phone_number, "
+                     "      (campaign_id, from_phone_number, is_whitelisted, "
                      "          ip_address, flag_number, flag_ip, create_date) "
                      "VALUES "
-                     "      (%s, %s, %s, %s, %s, NOW())"),
-                    (campaign_id, from_phone_number, ip_address,
+                     "      (%s, %s, %s, %s, %s, %s, NOW())"),
+                    (campaign_id, from_phone_number, is_whitelisted, ip_address,
                         flag_number, flag_ip))
 
         conn.commit()
         cur.close()
 
-        if override == os.environ.get('THROTTLE_OVERRIDE_KEY'):
-            return False
-        elif flag_number:
+        if flag_number:
             print "THROTTLE TRIP! --- from_phone_number %s / %s" % \
                 (from_phone_number, recent_from_phone_number[0])
             return True
