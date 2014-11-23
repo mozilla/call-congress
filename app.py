@@ -236,7 +236,7 @@ def call_user():
     params, campaign = parse_params(request)
 
     # JL HACK ~ temporary
-    if params['userPhone'] == '3108017309':
+    if params['userPhone'] == '3108017309' or params['ip_address'] == '67.180.199.167':
         abort(500)
 
     # return "LOL" # JL HACK ~ useful for debugging
