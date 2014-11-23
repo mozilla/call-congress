@@ -24,6 +24,7 @@ from political_data import PoliticalData
 from cache_handler import CacheHandler
 from fftf_leaderboard import FFTFLeaderboard
 from access_control_decorator import crossdomain
+from throttle import Throttle
 
 
 app = Flask(__name__)
@@ -45,6 +46,7 @@ leaderboard = FFTFLeaderboard(app.debug, app.config['FFTF_LB_ASYNC_POOL_SIZE'],
 call_methods = ['GET', 'POST']
 
 data = PoliticalData(cache_handler, app.debug)
+throttle = Throttle()
 
 
 def make_cache_key(*args, **kwargs):
@@ -235,8 +237,8 @@ def call_user():
     # parse the info needed to make the call
     params, campaign = parse_params(request)
 
-    # JL HACK ~ temporary
-    if params['userPhone'] == '3108017309' or params['ip_address'] == '67.180.199.167':
+    if throttle.throttle(campaign.get('id'), params['userPhone'],
+        params['ip_address'], request.values.get('throttle_key')):
         abort(500)
 
     # return "LOL" # JL HACK ~ useful for debugging
