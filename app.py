@@ -75,7 +75,7 @@ def full_url_for(route, **kwds):
 def parse_params(r):
 
     params = {
-        'userPhone': r.values.get('userPhone'),
+        'userPhone': r.values.get('userPhone').replace('-', ''),
         'campaignId': r.values.get('campaignId', 'default'),
         'zipcode': r.values.get('zipcode', None),
         'repIds': r.values.getlist('repIds'),
