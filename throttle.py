@@ -29,6 +29,8 @@ class Throttle():
         flag_ip = 0
         is_whitelisted = 0
 
+        hashed_ip_address = hashlib.sha256(ip_address).hexdigest()
+
         qry = ("SELECT count(id) FROM _ms_call_throttle WHERE "
                "create_date >= NOW() - '1 day'::INTERVAL "
                " AND campaign_id=%s AND from_phone_number=%s")
@@ -40,8 +42,8 @@ class Throttle():
 
         qry = ("SELECT count(id) FROM _ms_call_throttle WHERE "
                "create_date >= NOW() - '1 day'::INTERVAL "
-               " AND campaign_id=%s AND ip_address=%s")
-        cur.execute(qry, (campaign_id, ip_address))
+               " AND campaign_id=%s AND (ip_address=%s OR ip_address=%s)")
+        cur.execute(qry, (campaign_id, ip_address, hashed_ip_address))
         recent_ip_address = cur.fetchone()
 
         if recent_ip_address[0] > 1:
@@ -53,7 +55,7 @@ class Throttle():
             is_whitelisted = 1
 
         if flag_number == 0 and flag_ip == 0:
-            ip_address = hashlib.sha256(ip_address).hexdigest()
+            ip_address = hashed_ip_address
 
         cur.execute(("INSERT INTO _ms_call_throttle "
                      "      (campaign_id, from_phone_number, is_whitelisted, "
