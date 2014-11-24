@@ -1,4 +1,4 @@
-import os, psycopg2
+import os, psycopg2, hashlib
 
 class Throttle():
 
@@ -51,6 +51,9 @@ class Throttle():
             flag_ip = 0
             flag_number = 0
             is_whitelisted = 1
+
+        if flag_number == 0 and flag_ip == 0:
+            ip_address = hashlib.sha256(ip_address).hexdigest()
 
         cur.execute(("INSERT INTO _ms_call_throttle "
                      "      (campaign_id, from_phone_number, is_whitelisted, "

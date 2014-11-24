@@ -85,12 +85,14 @@ class FFTFLeaderboard():
             if debug_mode:
                 print "FFTF Extra Data log call complete: %s" % res
 
+        ip = hashlib.sha256(request.values.get("ip_address", "")).hexdigest()
+
         data = {
             'key': self.api_key,
             'campaign_id': campaign['id'],
             'from_phone_number': string.replace(params['userPhone'], "-", ""),
             'to_phone_number': string.replace(to_phone, "-", ""),
-            'ip_address': request.values.get("ip_address", ""),
+            'ip_address': ip,
             'call_index': call_index
         }
 
