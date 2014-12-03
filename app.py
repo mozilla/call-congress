@@ -55,7 +55,7 @@ def make_cache_key(*args, **kwargs):
 
 def play_or_say(resp_or_gather, msg_template, **kwds):
     # take twilio response and play or say a mesage
-    # can use mustache templates to render keword arguments
+    # can use mustache templates to render keyword arguments
     msg = pystache.render(msg_template, kwds)
 
     if msg.startswith('http'):
@@ -346,8 +346,9 @@ def make_single_call():
         special = json.loads(params['repIds'][i].replace("SPECIAL_CALL_", ""))
         to_phone = special['number']
         full_name = special['name']
+        office = special['office']
         play_or_say(resp, campaign.get('msg_special_call_intro',
-            campaign['msg_rep_intro']), name=full_name)
+            campaign['msg_rep_intro']), name=full_name, office=office)
 
     else:
 
@@ -356,13 +357,15 @@ def make_single_call():
         to_phone = member['phone']
         full_name = unicode("{} {}".format(
             member['firstname'], member['lastname']), 'utf8')
+        title = member['title']
+        state = member['state']
 
         if 'voted_with_list' in campaign and \
                 params['repIds'][i] in campaign['voted_with_list']:
             play_or_say(
-                resp, campaign['msg_repo_intro_voted_with'], name=full_name)
+                resp, campaign['msg_rep_intro_voted_with'], name=full_name, title=title, state=state)
         else:
-            play_or_say(resp, campaign['msg_rep_intro'], name=full_name)
+            play_or_say(resp, campaign['msg_rep_intro'], name=full_name, title=title, state=state)
 
     if app.debug:
         print u'DEBUG: Call #{}, {} ({}) from {} : make_single_call()'.format(i,
