@@ -96,6 +96,12 @@ def parse_params(r):
         else:
             params['repIds'] = campaign['repIds']
 
+        if campaign.get('randomize_order', False):
+            random.shuffle(params['repIds'])
+
+    if params['userPhone']:
+        params['userPhone'] = params['userPhone'].replace('-', '')
+
     # get representative's id by zip code
     if params['zipcode']:
         params['repIds'] = data.locate_member_ids(
@@ -106,7 +112,7 @@ def parse_params(r):
         del params['zipcode']
 
     if 'random_choice' in campaign:
-        # pick a random choice among a selected set of members
+        # pick a single random choice among a selected set of members
         params['repIds'] = [random.choice(campaign['random_choice'])]
 
     return params, campaign
