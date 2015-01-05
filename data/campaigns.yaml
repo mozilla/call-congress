@@ -689,3 +689,85 @@
       number: 202-456-6515
     - name: office of administration directors office
       number: 202-456-2861
+
+- id: ncta-blanket
+  numbers:
+    - 650-716-1243
+    - 205-683-2590
+    - 480-405-0187
+    - 719-354-2153
+    - 203-487-5661
+    - 239-330-1915
+    - 217-441-2582
+    - 218-729-2044
+    - 612-999-1433
+    - 262-725-0171
+  target_house: false
+  target_senate: false
+  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/comcast_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/ncta/comcast_prompt_2.mp3
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting_new.mp3
+  msg_call_block_intro: OK we are connecting you need to figure out what to say here.
+  msg_rep_intro: Now connecting you to {{name}}.
+  msg_final_thanks: k thanks bye
+  msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/ncta/comcast_prompt_thanks_2.mp3
+  press_1_callback: https://queue.fightforthefuture.org/schedule_phone_call?phone_number={{phone}}&campaign_id=ncta-blanket-recurring
+  call_human_check: false
+  fftf_log_extra_data: true
+  infinite_loop: true
+  extra_first_calls:
+    - name: NCTA General Inquiries
+      number: 202-222-2300
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_NCTA_general_inquiries.mp3
+    - name: NCTA Press
+      number: 202-222-2350
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_NCTA_media.mp3
+    - name: NCTA Member Services
+      number: 202-222-2310
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_NCTA_member_services.mp3
+    - name: NCTA Government Relations
+      number: 202-222-2410
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_NCTA_government_relations.mp3
+    - name: NCTA Legal Department
+      number: 202-222-2445
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_NCTA_legal.mp3
+    - name: NCTA Grassroots Department
+      number: 202-222-2315
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_NCTA_grassroots.mp3
+    - name: NCTA Brian Dietz
+      number: 202-258-2881
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_NCTA_brian_dietz.mp3
+    - name: NCTA Rob Stoddard
+      number: 202-258-2851
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_NCTA_rob_stoddard.mp3
+    - name: Randal Milch
+      number: 212-395-2384
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Verizon_randal_milch.mp3
+    - name: Randal Milch Cell Phone
+      number: 202-494-9054
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Verizon_randal_milch_cell.mp3
+    - name: James Cicconi
+      number: 202-457-2233
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_ATT_james_cicconi.mp3
+    - name: Wayne Watts
+      number: 214-757-3300
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_ATT_wayne_watts.mp3
+    - name: Kathryn Zachem
+      number: 202-379-7134
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Comcast_kathryn_zachem.mp3
+    - name: Melissa Maxfield
+      number: 202-379-7120
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Comcast_melissa_maxfield.mp3
+    - name: Lynn Charytan
+      number: 202-379-7136
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Comcast_lynn_charytan.mp3
+    - name: David Don
+      number: 202-379-7145
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Comcast_david_don.mp3
+    - name: Klayton Fennell
+      number: 215-286-5585
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Comcast_klayton_fennell.mp3
+    - name: Mary McManus
+      number: 202-379-7141
+      intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Comcast_mary_mcmanus.mp3
+

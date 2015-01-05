@@ -244,9 +244,9 @@ def call_user():
     # parse the info needed to make the call
     params, campaign = parse_params(request)
 
-    if throttle and throttle.throttle(campaign.get('id'), params['userPhone'],
-        params['ip_address'], request.values.get('throttle_key')):
-        abort(500)
+    # if throttle and throttle.throttle(campaign.get('id'), params['userPhone'],
+    #     params['ip_address'], request.values.get('throttle_key')):
+    #     abort(500)
 
     # return "LOL" # JL HACK ~ useful for debugging
 
@@ -380,8 +380,11 @@ def make_single_call():
         special = json.loads(params['repIds'][i].replace("SPECIAL_CALL_", ""))
         to_phone = special['number']
         full_name = special['name']
-        play_or_say(resp, campaign.get('msg_special_call_intro',
-            campaign['msg_rep_intro']), name=full_name)
+        if special.get('intro'):
+            play_or_say(resp, special.get('intro'))
+        else:
+            play_or_say(resp, campaign.get('msg_special_call_intro',
+                campaign['msg_rep_intro']), name=full_name)
 
     else:
 
