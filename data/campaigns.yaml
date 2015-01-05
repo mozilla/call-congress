@@ -706,8 +706,7 @@
   target_senate: false
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/comcast_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/ncta/comcast_prompt_2.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_connecting_new.mp3
-  msg_call_block_intro: OK we are connecting you need to figure out what to say here.
+  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/comcast_connecting.mp3
   msg_rep_intro: Now connecting you to {{name}}.
   msg_final_thanks: k thanks bye
   msg_press_1: http://battleforthenet.s3.amazonaws.com/audio/ncta/comcast_prompt_thanks_2.mp3
