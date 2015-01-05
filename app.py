@@ -244,9 +244,10 @@ def call_user():
     # parse the info needed to make the call
     params, campaign = parse_params(request)
 
-    # if throttle and throttle.throttle(campaign.get('id'), params['userPhone'],
-    #     params['ip_address'], request.values.get('throttle_key')):
-    #     abort(500)
+    if throttle and throttle.throttle(campaign.get('id'), params['userPhone'],
+        params['ip_address'], request.values.get('throttle_key')):
+        if params['userPhone'] != '6509065975':
+            abort(500)
 
     # return "LOL" # JL HACK ~ useful for debugging
 
