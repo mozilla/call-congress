@@ -51,6 +51,8 @@ Currently stored in ``/data/campaigns.yaml``, each campaign has the following op
 * **target_house** include house members in lookups by location
 * **target_senate** include senators in lookups by location
 * **target_house_first** allows the campaign to target house members before senate members (default: target senate first)
+* **only_call_1_sen** (optional, default false) only call one senator
+* **only_call_1_rep** (optional, default false) only call one representative
 * **repIds** (optional) list of rep. IDs to target
 * **randomize_order** (optional, default false) randomize the order of the phone calls
 * **overrides_google_spreadsheet_id** (optional) ID of publicly published Google Spreadsheet which can override the default campaign behaviors on a per-state basis (see [**section below**](#overriding-the-default-behaviors-with-a-google-spreadsheet))

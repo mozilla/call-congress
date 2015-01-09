@@ -61,7 +61,7 @@ class PoliticalData():
             return dict(self.campaigns['default'],
                         **self.campaigns[campaign_id])
 
-    def get_senators(self, districts):
+    def get_senators(self, districts, get_one=False):
         states = [d['state'] for d in districts]
 
         senators = [l for l in self.legislators
@@ -70,16 +70,24 @@ class PoliticalData():
 
         random.shuffle(senators)    # mix it up! always do this :)
 
-        return senators
+        if senators and get_one:
+            return [random.choice(senators)]
+        else:
+            return senators
 
-    def get_house_members(self, districts):
+    def get_house_members(self, districts, get_one=False):
         states = [d['state'] for d in districts]
         district_numbers = [d['district_number'] for d in districts]
 
-        return [l for l in self.legislators
+        reps = [l for l in self.legislators
                 if l['chamber'] == 'house'
                 and l['state'] in states
                 and l['district'] in district_numbers]
+
+        if reps and get_one:
+            return [random.choice(reps)]
+        else:
+            return reps
 
     def locate_member_ids(self, zipcode, campaign):
         """get congressional member ids from zip codes to districts data"""
@@ -118,22 +126,26 @@ class PoliticalData():
 
         # filter list by campaign target_house, target_senate
         if target_senate and not target_house_first:
-            member_ids.extend([s['bioguide_id']
-                               for s in self.get_senators(local_districts)])
+            sens = [s['bioguide_id'] for s
+                        in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))]
+            if self.debug_mode:
+                print "got %s sens" % sens
+            member_ids.extend(sens)
 
         if target_house:
             reps = [h['bioguide_id'] for h
-                               in self.get_house_members(local_districts)]
-
-            if campaign.get('only_call_1_rep', False) and len(reps) > 1:
-                reps = [reps[0]]
-
-            print "got reps: %s" % str(reps)
+                       in self.get_house_members(local_districts, campaign.get('only_call_1_rep', False))]
+            if self.debug_mode:
+                print "got %s reps" % reps
             member_ids.extend(reps)
 
         if target_senate and target_house_first:
-            member_ids.extend([s['bioguide_id']
-                               for s in self.get_senators(local_districts)])
+            sens = [s['bioguide_id'] for s
+                       in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))]
+            if self.debug_mode:
+                print "got %s sens" % sens
+            member_ids.extend(sens)
+
 
         if campaign.get('randomize_order', False):
             random.shuffle(member_ids)
