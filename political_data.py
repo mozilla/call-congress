@@ -61,7 +61,7 @@ class PoliticalData():
             return dict(self.campaigns['default'],
                         **self.campaigns[campaign_id])
 
-    def get_senators(self, districts):
+    def get_senators(self, districts, get_one=False):
         states = [d['state'] for d in districts]
 
         senators = [l for l in self.legislators
@@ -70,16 +70,24 @@ class PoliticalData():
 
         random.shuffle(senators)    # mix it up! always do this :)
 
-        return senators
+        if senators and get_one:
+            return [random.choice(senators)]
+        else:
+            return senators
 
-    def get_house_members(self, districts):
+    def get_house_members(self, districts, get_one=False):
         states = [d['state'] for d in districts]
         district_numbers = [d['district_number'] for d in districts]
 
-        return [l for l in self.legislators
+        reps = [l for l in self.legislators
                 if l['chamber'] == 'house'
                 and l['state'] in states
                 and l['district'] in district_numbers]
+
+        if reps and get_one:
+            return [random.choice(reps)]
+        else:
+            return reps
 
     def locate_member_ids(self, zipcode, campaign):
         """get congressional member ids from zip codes to districts data"""
@@ -118,22 +126,26 @@ class PoliticalData():
 
         # filter list by campaign target_house, target_senate
         if target_senate and not target_house_first:
-            member_ids.extend([s['bioguide_id']
-                               for s in self.get_senators(local_districts)])
+            sens = [s['bioguide_id'] for s
+                        in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))]
+            if self.debug_mode:
+                print "got %s sens" % sens
+            member_ids.extend(sens)
 
         if target_house:
             reps = [h['bioguide_id'] for h
-                               in self.get_house_members(local_districts)]
-
-            if campaign.get('only_call_1_rep', False) and len(reps) > 1:
-                reps = [reps[0]]
-
-            print "got reps: %s" % str(reps)
+                       in self.get_house_members(local_districts, campaign.get('only_call_1_rep', False))]
+            if self.debug_mode:
+                print "got %s reps" % reps
             member_ids.extend(reps)
 
         if target_senate and target_house_first:
-            member_ids.extend([s['bioguide_id']
-                               for s in self.get_senators(local_districts)])
+            sens = [s['bioguide_id'] for s
+                       in self.get_senators(local_districts, campaign.get('only_call_1_sen', False))]
+            if self.debug_mode:
+                print "got %s sens" % sens
+            member_ids.extend(sens)
+
 
         if campaign.get('randomize_order', False):
             random.shuffle(member_ids)
@@ -147,18 +159,21 @@ class PoliticalData():
                             member_ids.remove(l['bioguide_id'])     # janky
                             member_ids.insert(0, l['bioguide_id'])  # lol
 
-        def format_special_call(name, number, intro = None):
+        def format_special_call(name, number, office='', intro = None):
             return "SPECIAL_CALL_%s" % json.dumps({
-                'name': name, 'number': number, 'intro': intro})
+                'name': name, 'number': number, 'intro': intro, 
+                'office': office})
 
         # Finally, for some states we want to call a special name/number first.
         # We are going to shoehorn this data into the existing member_ids
         # paradigm and specially parse it. Super janky, but c'est la vie.
         if campaign.get('extra_first_calls'):
             lucky = random.choice(campaign.get('extra_first_calls'))
+
             first_call = format_special_call(
                 lucky.get('name'),
                 lucky.get('number'),
+                lucky.get('office', ''),
                 lucky.get('intro', None)
             )
             member_ids.insert(0, first_call)
