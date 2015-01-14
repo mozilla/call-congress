@@ -250,7 +250,8 @@ def call_user():
     if throttle and throttle.throttle(campaign.get('id'), params['userPhone'],
         params['ip_address'], request.values.get('throttle_key')):
         if params['userPhone'] != '6509065975':
-            abort(500)
+            # abort(500)
+            pass
 
     # return "LOL" # JL HACK ~ useful for debugging
 
