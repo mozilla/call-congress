@@ -159,6 +159,9 @@ class PoliticalData():
                             member_ids.remove(l['bioguide_id'])     # janky
                             member_ids.insert(0, l['bioguide_id'])  # lol
 
+        if campaign.get('max_calls_to_congress', False):
+            member_ids = member_ids[0:campaign.get('max_calls_to_congress')]
+
         def format_special_call(name, number, office='', intro = None):
             return "SPECIAL_CALL_%s" % json.dumps({
                 'name': name, 'number': number, 'intro': intro, 
@@ -197,6 +200,17 @@ class PoliticalData():
                 campaign.get('extra_last_call_name'),
                 "%d" % campaign.get('extra_last_call_num'))
             member_ids.extend([last_call])
+
+        if campaign.get('extra_last_calls'):
+            lucky = random.choice(campaign.get('extra_last_calls'))
+
+            last_call = format_special_call(
+                lucky.get('name'),
+                lucky.get('number'),
+                lucky.get('office', ''),
+                lucky.get('intro', None)
+            )
+            member_ids.append(last_call)
 
         print member_ids
 
