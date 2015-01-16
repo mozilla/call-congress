@@ -8,7 +8,7 @@ import twilio.rest
 class Config(object):
     DEBUG = True
 
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///dev.db'
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL','sqlite:///dev.db')
 
     APPLICATION_ROOT = 'http://1cf55a5a.ngrok.com'
 

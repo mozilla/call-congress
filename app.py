@@ -19,7 +19,12 @@ from flask_jsonpify import jsonify
 from raven.contrib.flask import Sentry
 from twilio import TwilioRestException
 
+<<<<<<< HEAD
 from models import db, aggregate_stats, log_call, call_count
+=======
+from database import db
+from models import aggregate_stats, log_call, call_count, call_list
+>>>>>>> 1cc8270... recent_calls json
 from political_data import PoliticalData
 from cache_handler import CacheHandler
 from fftf_leaderboard import FFTFLeaderboard
@@ -456,6 +461,38 @@ def count():
 
     return jsonify(campaign=campaign, count=call_count(campaign))
 
+
+@cache.cached(timeout=60, key_prefix=make_cache_key)
+@app.route('/recent_calls')
+def recent_calls():
+    @after_this_request
+    def add_expires_header(response):
+        expires = datetime.utcnow()
+        expires = expires + timedelta(seconds=60)
+        expires = datetime.strftime(expires, "%a, %d %b %Y %H:%M:%S GMT")
+
+        response.headers['Expires'] = expires
+
+        return response
+
+    campaign = request.values.get('campaign', 'default')
+    since = request.values.get('since', datetime.utcnow() - timedelta(days=1))
+
+    calls = call_list(campaign, since)
+    serialized_calls = []
+    for c in calls:
+        s = dict(timestamp = c.timestamp.isoformat(),
+                 number = '%s-%s-XXXX' % (c.areacode, c.exchange))
+        member = data.get_legislator_by_id(c.member_id)
+        if member:
+            s['member'] = dict(
+                            title=member['title'],
+                            firstname=member['firstname'],
+                            lastname=member['lastname']
+                        )
+        serialized_calls.append(s)
+
+    return jsonify(campaign=campaign, calls=serialized_calls)
 
 @cache.cached(timeout=60, key_prefix=make_cache_key)
 @app.route('/stats')

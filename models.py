@@ -86,6 +86,19 @@ def call_count(campaign_id):
 
         return 0
 
+def call_list(campaign_id, since, limit=50):
+    try:
+        calls = (db.session.query(Call)
+                .filter(Call.campaign_id == campaign_id)
+                .filter(Call.timestamp >= since)
+                .limit(limit).all())
+        return calls
+
+    except SQLAlchemyError:
+        logging.error('Failed to get call_list:', exc_info=True)
+
+        return 0
+
 
 def aggregate_stats(campaign_id):
     zipcodes = (db.session.query(Call.zipcode, func.Count(Call.zipcode))
