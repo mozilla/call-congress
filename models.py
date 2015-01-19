@@ -89,6 +89,7 @@ def call_count(campaign_id):
 def call_list(campaign_id, since, limit=50):
     try:
         calls = (db.session.query(Call)
+                .order_by(Call.timestamp)
                 .filter(Call.campaign_id == campaign_id)
                 .filter(Call.timestamp >= since)
                 .limit(limit).all())

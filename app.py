@@ -19,11 +19,11 @@ from flask_jsonpify import jsonify
 from raven.contrib.flask import Sentry
 from twilio import TwilioRestException
 
-from models import aggregate_stats, log_call, call_count, call_list
+from models import db, aggregate_stats, log_call, call_count, call_list
 from political_data import PoliticalData
 from cache_handler import CacheHandler
 from fftf_leaderboard import FFTFLeaderboard
-from access_control_decorator import crossdomain
+from access_control_decorator import crossdomain, requires_auth
 
 
 app = Flask(__name__)
@@ -472,9 +472,12 @@ def recent_calls():
 
     campaign = request.values.get('campaign', 'default')
     since = request.values.get('since', datetime.utcnow() - timedelta(days=1))
+    limit = request.values.get('limit', 50)
 
-    calls = call_list(campaign, since)
+    calls = call_list(campaign, since, limit)
     serialized_calls = []
+    if not calls:
+        return jsonify(campaign=campaign, calls=[], count=0)
     for c in calls:
         s = dict(timestamp = c.timestamp.isoformat(),
                  number = '%s-%s-XXXX' % (c.areacode, c.exchange))
@@ -487,7 +490,14 @@ def recent_calls():
                         )
         serialized_calls.append(s)
 
-    return jsonify(campaign=campaign, calls=serialized_calls)
+    return jsonify(campaign=campaign, calls=serialized_calls, count=len(serialized_calls))
+
+@app.route('/live')
+@requires_auth
+def live():
+    campaign = request.values.get('campaign', 'default')
+    return render_template('live.html')
+
 
 @cache.cached(timeout=60, key_prefix=make_cache_key)
 @app.route('/stats')
