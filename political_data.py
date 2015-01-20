@@ -89,6 +89,12 @@ class PoliticalData():
         else:
             return reps
 
+    def get_legislator_by_id(self, member_id):
+        for l in self.legislators:
+            if l['bioguide_id'] == member_id:
+                return l
+        return None
+
     def locate_member_ids(self, zipcode, campaign):
         """get congressional member ids from zip codes to districts data"""
         local_districts = [d for d in self.districts
