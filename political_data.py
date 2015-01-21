@@ -12,6 +12,9 @@ class PoliticalData():
     overrides_data = {}     # the google spreadsheet overrides for each campaign
     scrape_times = {}       # the last google scrape timestamps for campaigns
 
+    exclusions = {}         # the google spreadsheet exclusions per campaign
+    exclusion_scrapes = {}  # the last google scrape timestamps for exclusions
+
     cache_handler = None
     campaigns = None
     legislators = None
@@ -95,6 +98,42 @@ class PoliticalData():
                 return l
         return None
 
+    def format_special_call(self, name, number, office='', intro = None):
+        return "S_%s" % json.dumps({
+            'p': name, 'n': number, 'i': intro, 
+            'o': office})
+
+    def pick_lucky_recipients(self, list_so_far, campaign, which='first',num=1):
+        lucky = campaign.get('extra_%s_calls' % which)
+        random.shuffle(lucky)
+        lucky = lucky[0:num]
+
+        for person in lucky:
+
+            if isinstance(person, basestring):
+                p = self.get_legislator_by_id(person)
+
+                if not p or not p.get('phone'):
+                    continue
+
+                person = {
+                    "name": "%s %s"%(p.get('firstname'), p.get('lastname')),
+                    "number": p.get('phone')
+                }
+
+            special_call = self.format_special_call(
+                person.get('name'),
+                person.get('number'),
+                person.get('office', ''),
+                person.get('intro', None)
+            )
+            if which == 'first':
+                list_so_far.insert(0, special_call)
+            else:
+                list_so_far.append(special_call)
+
+        return list_so_far
+
     def locate_member_ids(self, zipcode, campaign):
         """get congressional member ids from zip codes to districts data"""
         local_districts = [d for d in self.districts
@@ -168,55 +207,43 @@ class PoliticalData():
         if campaign.get('max_calls_to_congress', False):
             member_ids = member_ids[0:campaign.get('max_calls_to_congress')]
 
-        def format_special_call(name, number, office='', intro = None):
-            return "SPECIAL_CALL_%s" % json.dumps({
-                'name': name, 'number': number, 'intro': intro, 
-                'office': office})
+        # Now handle any exclusions lol
+        if campaign.get('exclusions_google_spreadsheet_id'):
+            exclusions = self.get_exclusions(campaign)
+            for exclusion in exclusions:
+                exclusion = exclusion.encode('ascii', errors='backslashreplace')
+                if exclusion in member_ids:
+                    print "Politician %s is on exclusion list!" % exclusion
+                member_ids = filter(lambda a: a != exclusion, member_ids)
 
-        # Finally, for some states we want to call a special name/number first.
-        # We are going to shoehorn this data into the existing member_ids
-        # paradigm and specially parse it. Super janky, but c'est la vie.
         if campaign.get('extra_first_calls'):
-            lucky = random.choice(campaign.get('extra_first_calls'))
-
-            first_call = format_special_call(
-                lucky.get('name'),
-                lucky.get('number'),
-                lucky.get('office', ''),
-                lucky.get('intro', None)
-            )
-            member_ids.insert(0, first_call)
-
+            member_ids = self.pick_lucky_recipients(member_ids, campaign,
+                           'first', campaign.get('number_of_extra_first_calls'))
 
         if campaign.get('extra_first_call_name') and \
                 campaign.get('extra_first_call_num'):
-            first_call = format_special_call(
+            first_call = self.format_special_call(
                 campaign.get('extra_first_call_name'),
                 "%d" % campaign.get('extra_first_call_num'))
             member_ids.insert(0, first_call)
 
-
         if first_call_number and first_call_name:
-            first_call = format_special_call(first_call_name, first_call_number)
+            first_call = self.format_special_call(first_call_name,
+                            first_call_number)
             member_ids.insert(0, first_call)
+
+        if campaign.get('extra_last_calls'):
+            member_ids = self.pick_lucky_recipients(member_ids, campaign,
+                             'last', campaign.get('number_of_extra_last_calls'))
 
         if campaign.get('extra_last_call_name') and \
                 campaign.get('extra_last_call_num'):
-            last_call = format_special_call(
+            last_call = self.format_special_call(
                 campaign.get('extra_last_call_name'),
-                "%d" % campaign.get('extra_last_call_num'))
+                "%d" % campaign.get('extra_last_call_num'),
+                '',
+                campaign.get('extra_last_call_intro'))
             member_ids.extend([last_call])
-
-        if campaign.get('extra_last_calls'):
-            lucky = random.choice(campaign.get('extra_last_calls'))
-
-            last_call = format_special_call(
-                lucky.get('name'),
-                lucky.get('number'),
-                lucky.get('office', ''),
-                lucky.get('intro', None)
-            )
-            member_ids.append(last_call)
 
         print member_ids
 
@@ -254,6 +281,66 @@ class PoliticalData():
                 return True
 
         return False
+
+    def get_exclusions(self, campaign):
+
+        last_scraped = time.time()-self.exclusion_scrapes.get(campaign['id'], 0)
+        expired = last_scraped > self.SPREADSHEET_CACHE_TIMEOUT
+
+        if self.exclusions.get(campaign.get('id')) == None or expired:
+            self.populate_exclusions(campaign)
+
+        return self.exclusions[campaign.get('id')]
+
+    def populate_exclusions(self, campaign):
+
+        spreadsheet_id = campaign.get('exclusions_google_spreadsheet_id', None)
+        spreadsheet_key = '%s-exclusions-list' % campaign.get('id')
+
+        exclusions_data = self.cache_handler.get(spreadsheet_key, None)
+
+        if exclusions_data == None:
+            exclusions = self.grab_exclusions_from_google(
+                            spreadsheet_id,
+                            campaign.get('exclusions_spreadsheet_match_field'),
+                            campaign.get('exclusions_spreadsheet_match_value'),
+                            campaign.get('exclusions_spreadsheet_bioguide_col'))
+            if self.debug_mode:
+                print "GOT DATA FROM GOOGLE: %s" % str(exclusions)
+
+            self.cache_handler.set(
+                spreadsheet_key,
+                json.dumps(exclusions),
+                self.SPREADSHEET_CACHE_TIMEOUT)
+
+            self.exclusion_scrapes[campaign.get('id')] = time.time()
+        else:
+            exclusions = json.loads(exclusions_data)
+            if self.debug_mode:
+                print "GOT DATA FROM CACHE: %s" % str(exclusions)
+
+        self.exclusions[campaign.get('id')] = exclusions
+
+    def grab_exclusions_from_google(self, spreadsheet_id, field, val, bioguide):
+
+        url = ('https://spreadsheets.google.com/feeds/list/'
+                '%s/default/public/values?alt=json') % spreadsheet_id
+
+        response = urllib2.urlopen(url).read()
+        data = json.loads(response)
+
+        exclusions = []
+
+        for row in data['feed']['entry']:
+            if row.get('gsx$%s' % field) and row['gsx$%s' % field].get('$t') \
+                    and row['gsx$%s' % field]['$t'] == val \
+                    and row.get('gsx$%s' % bioguide) \
+                    and row['gsx$%s' % bioguide].get('$t'):
+                exclusions.append(str(row['gsx$%s' % bioguide]['$t']).encode(
+                    'ascii', errors='backslashreplace'))
+
+        return exclusions
+            
 
     def get_overrides(self, campaign):
 
