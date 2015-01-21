@@ -399,8 +399,9 @@ def make_single_call():
         member = [l for l in data.legislators
                   if l['bioguide_id'] == params['repIds'][i]][0]
         to_phone = member['phone']
-        full_name = unicode("{} {}".format(
-            member['firstname'], member['lastname']), 'utf8')
+        title = "Representative" if member['title'] == 'Rep' else 'Senator'
+        full_name = unicode("{} {} {}".format(
+            title, member['firstname'], member['lastname']), 'utf8')
         title = member['title']
         state = member['state']
 
