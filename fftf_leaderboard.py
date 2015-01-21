@@ -87,10 +87,15 @@ class FFTFLeaderboard():
 
         ip = hashlib.sha256(request.values.get("ip_address", "")).hexdigest()
 
+        user_phone = params.get('userPhone', None)
+
+        if not user_phone:
+            user_phone = request.values.get('From', '+15555555555')[-10:]
+
         data = {
             'key': self.api_key,
             'campaign_id': campaign['id'],
-            'from_phone_number': string.replace(params['userPhone'], "-", ""),
+            'from_phone_number': string.replace(user_phone, "-", ""),
             'to_phone_number': string.replace(to_phone, "-", ""),
             'ip_address': ip,
             'call_index': call_index
