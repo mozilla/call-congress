@@ -51,7 +51,7 @@ call_methods = ['GET', 'POST']
 
 data = PoliticalData(cache_handler, app.debug)
 
-
+print "Call Congress is starting up!"
 
 def make_cache_key(*args, **kwargs):
     path = request.path
