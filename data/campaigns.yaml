@@ -341,94 +341,64 @@
   extra_first_calls:
     - name: Jonathan Sallet
       number: 202-418-2836
-      office: OGC
     - name: Stephanie Weiner
       number: 202-418-1752
-      office: OGC
     - name: Jacob Lewis
       number: 202-418-1767
-      office: OGC
     - name: Michele Ellison
       number: 202-418-1718
-      office: OGC
     - name: Mignon Clyburn
       number: 202-418-2100
-      office: Commissioner Clyburn
     - name: Adonis Hoffman
       number: 202-418-2102
-      office: Commissioner Clyburn
     - name: Rebekah Goodheart
       number: 202-418-2100
-      office: Commissioner Clyburn
     - name: Louis Peraertz
       number: 202-418-2100
-      office: Commissioner Clyburn
     - name: Daniel Alvarez
       number: 202-418-1000
-      office: Chairman Wheeler
     - name: Ruth Milkman
       number: 202-418-2107
-      office: Chairman Wheeler
     - name: Gigi Sohn
       number: 202-418-0898
-      office: Chairman Wheeler
     - name: Philip Verveer
       number: 202-418-0897
-      office: Chairman Wheeler
     - name: Maria Kirby
       number: 202-418-1476
-      office: Chairman Wheeler
     - name: Diane Cornell
       number: 202-418-0899
-      office: Chairman Wheeler
     - name: Renee Gregory
       number: 202-418-0533
-      office: Chairman Wheeler
     - name: Tom Wheeler
       number: 202-418-1000
-      office: Chairman Wheeler
     - name: Matthew Berry
       number: 202-418-2005
-      office: Commissioner Pai
     - name: Nicholas Degani
       number: 202-418-2277
-      office: Commissioner Pai
     - name: Ajit Pai
       number: 202-418-2000
-      office: Commissioner Pai
     - name: Mike O'Rielly
       number: 202-418-2300
-      office: Commissioner O'Rielly
     - name: Amy Bender
       number: 202-418-2300
-      office: Commissioner O'Rielly
     - name: Shannon Gilson
       number: 202-418-0505
-      office: Media Relations
     - name: Mark Wigfield
       number: 202-418-0253
-      office: Media Relations
     - name: Kim Hart
       number: 202-418-8191
-      office: Media Relations
     - name: Jonathan Chambers
       number: 202-418-2007
-      office: OSP
     - name: Jon Wilkins
       number: 202-418-8221
-      office: OSP
     - name: Julie Veach
       number: 202-418-1558
-      office: WCB
     - name: Matthew Delnero
       number: 202-418-7433
-      office: WCB
     - name: Roger Sherman
       number: 202-418-0656
-      office: WTB
     - name: Kris Moneith
       number: 202-418-1098
-      office: CGB
 
 - id: fcc-blanket-recurring
   numbers:
@@ -457,94 +427,64 @@
   extra_first_calls:
     - name: Jonathan Sallet
       number: 202-418-2836
-      office: OGC
     - name: Stephanie Weiner
       number: 202-418-1752
-      office: OGC
     - name: Jacob Lewis
       number: 202-418-1767
-      office: OGC
     - name: Michele Ellison
       number: 202-418-1718
-      office: OGC
     - name: Mignon Clyburn
       number: 202-418-2100
-      office: Commissioner Clyburn
     - name: Adonis Hoffman
       number: 202-418-2102
-      office: Commissioner Clyburn
     - name: Rebekah Goodheart
       number: 202-418-2100
-      office: Commissioner Clyburn
     - name: Louis Peraertz
       number: 202-418-2100
-      office: Commissioner Clyburn
     - name: Daniel Alvarez
       number: 202-418-1000
-      office: Chairman Wheeler
     - name: Ruth Milkman
       number: 202-418-2107
-      office: Chairman Wheeler
     - name: Gigi Sohn
       number: 202-418-0898
-      office: Chairman Wheeler
     - name: Philip Verveer
       number: 202-418-0897
-      office: Chairman Wheeler
     - name: Maria Kirby
       number: 202-418-1476
-      office: Chairman Wheeler
     - name: Diane Cornell
       number: 202-418-0899
-      office: Chairman Wheeler
     - name: Renee Gregory
       number: 202-418-0533
-      office: Chairman Wheeler
     - name: Tom Wheeler
       number: 202-418-1000
-      office: Chairman Wheeler
     - name: Matthew Berry
       number: 202-418-2005
-      office: Commissioner Pai
     - name: Nicholas Degani
       number: 202-418-2277
-      office: Commissioner Pai
     - name: Ajit Pai
       number: 202-418-2000
-      office: Commissioner Pai
     - name: Mike O'Rielly
       number: 202-418-2300
-      office: Commissioner O'Rielly
     - name: Amy Bender
       number: 202-418-2300
-      office: Commissioner O'Rielly
     - name: Shannon Gilson
       number: 202-418-0505
-      office: Media Relations
     - name: Mark Wigfield
       number: 202-418-0253
-      office: Media Relations
     - name: Kim Hart
       number: 202-418-8191
-      office: Media Relations
     - name: Jonathan Chambers
       number: 202-418-2007
-      office: OSP
     - name: Jon Wilkins
       number: 202-418-8221
-      office: OSP
     - name: Julie Veach
       number: 202-418-1558
-      office: WCB
     - name: Matthew Delnero
       number: 202-418-7433
-      office: WCB
     - name: Roger Sherman
       number: 202-418-0656
-      office: WTB
     - name: Kris Moneith
       number: 202-418-1098
-      office: CGB
 
 - id: whitehouse-blanket
   numbers:
