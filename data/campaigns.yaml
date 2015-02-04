@@ -250,6 +250,7 @@
   call_human_check: false
   only_call_1_rep: true
   max_calls_to_congress: 2
+  fftf_log_extra_data: true
   extra_last_calls:
     - name: FCC Chairman Tom Wheeler
       number: 202-418-1000
