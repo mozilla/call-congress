@@ -702,6 +702,7 @@
   call_human_check: false
   fftf_log_extra_data: true
   infinite_loop: true
+  number_of_extra_first_calls: 10
   extra_first_calls:
     - name: NCTA General Inquiries
       number: 202-222-2300
