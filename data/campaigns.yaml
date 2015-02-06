@@ -163,16 +163,15 @@
 
 - id: battleforthenet
   numbers:
-    - 650-716-1243
-    - 205-683-2590
-    - 480-405-0187
-    - 719-354-2153
-    - 203-487-5661
-    - 239-330-1915
-    - 217-441-2582
-    - 218-729-2044
-    - 612-999-1433
-    - 262-725-0171
+    - 920-472-2488
+    - 832-981-2899
+    - 312-487-2769
+    - 312-487-6123
+    - 954-372-8521
+    - 954-378-9720
+    - 405-563-8717
+    - 954-283-7773
+    - 862-666-3016
   target_house: true
   target_senate: true
   target_house_first: false
@@ -224,25 +223,22 @@
 
 - id: jan14th
   numbers:
-    - 650-716-1243
-    - 205-683-2590
-    - 480-405-0187
-    - 719-354-2153
-    - 203-487-5661
-    - 239-330-1915
-    - 217-441-2582
-    - 218-729-2044
-    - 612-999-1433
-    - 262-725-0171
+    - 920-472-2488
+    - 832-981-2899
+    - 312-487-2769
+    - 312-487-6123
+    - 954-372-8521
+    - 954-378-9720
+    - 405-563-8717
+    - 954-283-7773
+    - 862-666-3016
   target_house: true
   target_senate: true
   target_house_first: false
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_intro.mp3
+  msg_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_call_block_intro.mp3
+  msg_call_block_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_call_block_intro.mp3
   msg_rep_intro: We're now connecting you to {{name}}. Press star once you're done.
-  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
-  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
   msg_final_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_final_thanks.mp3
   randomize_order: true
@@ -250,7 +246,6 @@
   call_human_check: false
   only_call_1_rep: true
   max_calls_to_congress: 2
-  fftf_log_extra_data: true
   extra_last_calls:
     - name: FCC Chairman Tom Wheeler
       number: 202-418-1000
@@ -314,19 +309,10 @@
       number: 202-418-0898
     - name: Tom Wheeler
       number: 202-418-1000
-  
+
 - id: fcc-blanket
   numbers:
-    - 650-716-1243
-    - 205-683-2590
-    - 480-405-0187
-    - 719-354-2153
-    - 203-487-5661
-    - 239-330-1915
-    - 217-441-2582
-    - 218-729-2044
-    - 612-999-1433
-    - 262-725-0171
+    - 862-666-3016
   target_house: false
   target_senate: false
   msg_intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_intro.mp3
@@ -342,64 +328,94 @@
   extra_first_calls:
     - name: Jonathan Sallet
       number: 202-418-2836
+      office: OGC
     - name: Stephanie Weiner
       number: 202-418-1752
+      office: OGC
     - name: Jacob Lewis
       number: 202-418-1767
+      office: OGC
     - name: Michele Ellison
       number: 202-418-1718
+      office: OGC
     - name: Mignon Clyburn
       number: 202-418-2100
+      office: Commissioner Clyburn
     - name: Adonis Hoffman
       number: 202-418-2102
+      office: Commissioner Clyburn
     - name: Rebekah Goodheart
       number: 202-418-2100
+      office: Commissioner Clyburn
     - name: Louis Peraertz
       number: 202-418-2100
+      office: Commissioner Clyburn
     - name: Daniel Alvarez
       number: 202-418-1000
+      office: Chairman Wheeler
     - name: Ruth Milkman
       number: 202-418-2107
+      office: Chairman Wheeler
     - name: Gigi Sohn
       number: 202-418-0898
+      office: Chairman Wheeler
     - name: Philip Verveer
       number: 202-418-0897
+      office: Chairman Wheeler
     - name: Maria Kirby
       number: 202-418-1476
+      office: Chairman Wheeler
     - name: Diane Cornell
       number: 202-418-0899
+      office: Chairman Wheeler
     - name: Renee Gregory
       number: 202-418-0533
+      office: Chairman Wheeler
     - name: Tom Wheeler
       number: 202-418-1000
+      office: Chairman Wheeler
     - name: Matthew Berry
       number: 202-418-2005
+      office: Commissioner Pai
     - name: Nicholas Degani
       number: 202-418-2277
+      office: Commissioner Pai
     - name: Ajit Pai
       number: 202-418-2000
+      office: Commissioner Pai
     - name: Mike O'Rielly
       number: 202-418-2300
+      office: Commissioner O'Rielly
     - name: Amy Bender
       number: 202-418-2300
+      office: Commissioner O'Rielly
     - name: Shannon Gilson
       number: 202-418-0505
+      office: Media Relations
     - name: Mark Wigfield
       number: 202-418-0253
+      office: Media Relations
     - name: Kim Hart
       number: 202-418-8191
+      office: Media Relations
     - name: Jonathan Chambers
       number: 202-418-2007
+      office: OSP
     - name: Jon Wilkins
       number: 202-418-8221
+      office: OSP
     - name: Julie Veach
       number: 202-418-1558
+      office: WCB
     - name: Matthew Delnero
       number: 202-418-7433
+      office: WCB
     - name: Roger Sherman
       number: 202-418-0656
+      office: WTB
     - name: Kris Moneith
       number: 202-418-1098
+      office: CGB
 
 - id: fcc-blanket-recurring
   numbers:
@@ -428,64 +444,94 @@
   extra_first_calls:
     - name: Jonathan Sallet
       number: 202-418-2836
+      office: OGC
     - name: Stephanie Weiner
       number: 202-418-1752
+      office: OGC
     - name: Jacob Lewis
       number: 202-418-1767
+      office: OGC
     - name: Michele Ellison
       number: 202-418-1718
+      office: OGC
     - name: Mignon Clyburn
       number: 202-418-2100
+      office: Commissioner Clyburn
     - name: Adonis Hoffman
       number: 202-418-2102
+      office: Commissioner Clyburn
     - name: Rebekah Goodheart
       number: 202-418-2100
+      office: Commissioner Clyburn
     - name: Louis Peraertz
       number: 202-418-2100
+      office: Commissioner Clyburn
     - name: Daniel Alvarez
       number: 202-418-1000
+      office: Chairman Wheeler
     - name: Ruth Milkman
       number: 202-418-2107
+      office: Chairman Wheeler
     - name: Gigi Sohn
       number: 202-418-0898
+      office: Chairman Wheeler
     - name: Philip Verveer
       number: 202-418-0897
+      office: Chairman Wheeler
     - name: Maria Kirby
       number: 202-418-1476
+      office: Chairman Wheeler
     - name: Diane Cornell
       number: 202-418-0899
+      office: Chairman Wheeler
     - name: Renee Gregory
       number: 202-418-0533
+      office: Chairman Wheeler
     - name: Tom Wheeler
       number: 202-418-1000
+      office: Chairman Wheeler
     - name: Matthew Berry
       number: 202-418-2005
+      office: Commissioner Pai
     - name: Nicholas Degani
       number: 202-418-2277
+      office: Commissioner Pai
     - name: Ajit Pai
       number: 202-418-2000
+      office: Commissioner Pai
     - name: Mike O'Rielly
       number: 202-418-2300
+      office: Commissioner O'Rielly
     - name: Amy Bender
       number: 202-418-2300
+      office: Commissioner O'Rielly
     - name: Shannon Gilson
       number: 202-418-0505
+      office: Media Relations
     - name: Mark Wigfield
       number: 202-418-0253
+      office: Media Relations
     - name: Kim Hart
       number: 202-418-8191
+      office: Media Relations
     - name: Jonathan Chambers
       number: 202-418-2007
+      office: OSP
     - name: Jon Wilkins
       number: 202-418-8221
+      office: OSP
     - name: Julie Veach
       number: 202-418-1558
+      office: WCB
     - name: Matthew Delnero
       number: 202-418-7433
+      office: WCB
     - name: Roger Sherman
       number: 202-418-0656
+      office: WTB
     - name: Kris Moneith
       number: 202-418-1098
+      office: CGB
 
 - id: whitehouse-blanket
   numbers:
@@ -702,7 +748,6 @@
   call_human_check: false
   fftf_log_extra_data: true
   infinite_loop: true
-  number_of_extra_first_calls: 10
   extra_first_calls:
     - name: NCTA General Inquiries
       number: 202-222-2300
@@ -758,105 +803,3 @@
     - name: Mary McManus
       number: 202-379-7141
       intro: http://battleforthenet.s3.amazonaws.com/audio/ncta/call_intro_Comcast_mary_mcmanus.mp3
-
-- id: title-x-committees
-  numbers:
-    - 650-716-1243
-    - 205-683-2590
-    - 480-405-0187
-    - 719-354-2153
-    - 203-487-5661
-    - 239-330-1915
-    - 217-441-2582
-    - 218-729-2044
-    - 612-999-1433
-    - 262-725-0171
-  target_house: false
-  target_senate: false
-  msg_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_intro.mp3
-  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt_2.mp3
-  msg_call_block_intro: http://battleforthenet.s3.amazonaws.com/audio/committee_msg_call_block_intro.mp3
-  msg_ask_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_ask_zip.mp3
-  msg_invalid_zip: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_invalid_zip.mp3
-  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
-  msg_rep_intro: Now connecting you to {{name}}.
-  msg_final_thanks: k thanks bye
-  call_human_check: false
-  fftf_log_extra_data: true
-  exclusions_google_spreadsheet_id: 12g70eNkGA2hhRYKSENaeGxsgGyFukLRMHCqrLizdhlw
-  exclusions_spreadsheet_match_field: team
-  exclusions_spreadsheet_match_value: team-internet
-  exclusions_spreadsheet_bioguide_col: bioguide
-  number_of_extra_first_calls: 10
-  extra_first_calls:
-    # Rs on E+C
-    - B000213 #
-    - B001243 #
-    - B001248  #
-    - B001257
-    - B001275
-    - B001284
-    - C001092
-    - C001096
-    - E000291
-    - F000461
-    - G000558
-    - G000568
-    - H001045
-    - H001067
-    - J000292
-    - K000378
-    - L000566
-    - L000567
-    - L000576
-    - M001151
-    - M001159
-    - M001180
-    - M001190
-    - O000168
-    - P000373
-    - P000602
-    - S000364
-    - S001176
-    - U000031
-    - W000413
-    - W000791
-    # Senate Rs
-    - A000368
-    - B000575
-    - C001098
-    - D000618
-    - F000463
-    - G000562
-    - H001041
-    - J000293
-    - M000934
-    - R000595
-    - S001198
-    - T000250
-    - W000437
-    # Senate Ds, minus strong supporters
-    #- B001277 # Blumenthal
-    #- B001288 # Booker
-    - C000127
-    - K000367
-    #- M000133 # Markey
-    - M001170
-    - M001183
-    - P000595
-    - S001194
-    - U000039
-    - N000032   # NELSON!! (repeated 3 times for "weighting")
-    - P000034   # Frank Pallone
-    - C001067   # Yvette Clark
-    - E000179   # Eliot Engel
-    - C001036   # Lois Capps
-    - M001163   # Doris Matsui
-    - C001066   # Kathy Castor
-    - M001166   # Jerry McNerny
-    - L000570   # Ben Ray Lujan
-    - Y000062   # John Yarmuth
-    - S001180   # Schrader
-    - C001097   # Cardenas
-    - B001251   # Butterfield
-    - R000515   # Rush
