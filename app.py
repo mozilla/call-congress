@@ -1,4 +1,5 @@
 # JL HACK ~ CRITICAL: Add missing _sslwrap to Python to maintain gevent compat
+# Please see https://github.com/gevent/gevent/issues/477
 # ------------------------------------------------------------------------------
 # Re-add sslwrap to Python 2.7.9
 import inspect
