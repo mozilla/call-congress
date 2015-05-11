@@ -263,7 +263,47 @@
       number: 202-418-2400
       intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_jessica_rosenworcel.mp3
 
-
+- id: mass-surveillance
+  numbers:
+    - 920-472-2488
+    - 832-981-2899
+    - 312-487-2769
+    - 312-487-6123
+    - 954-372-8521
+    - 954-378-9720
+    - 405-563-8717
+    - 954-283-7773
+    - 862-666-3016
+  target_house: true
+  target_senate: true
+  target_house_first: false
+  msg_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt.mp3
+  msg_call_block_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_call_block_intro.mp3
+  msg_rep_intro: We're now connecting you to {{name}}. Press star once you're done.
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  msg_final_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_final_thanks.mp3
+  randomize_order: true
+  skip_star_confirm: false
+  call_human_check: false
+  only_call_1_rep: true
+  max_calls_to_congress: 2
+  extra_last_calls:
+    - name: FCC Chairman Tom Wheeler
+      number: 202-418-1000
+      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_tom_wheeler.mp3
+    - name: FCC Commissioner Mignon Clyburn
+      number: 202-418-2100
+      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_mignon_clyburn.mp3
+    - name: FCC Commissioner Michael O’Rielly
+      number: 202-418-2300
+      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_michael_oreilly.mp3
+    - name: FCC Commissioner Ajit Pai
+      number: 202-418-2000
+      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_ajit_pai.mp3
+    - name: FCC Commissioner Jessica Rosenworcel
+      number: 202-418-2400
+      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_jessica_rosenworcel.mp3
 
 - id: comcastmonopoly-roundrobin
   numbers:
