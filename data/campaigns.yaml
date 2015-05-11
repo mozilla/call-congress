@@ -287,23 +287,7 @@
   skip_star_confirm: false
   call_human_check: false
   only_call_1_rep: true
-  max_calls_to_congress: 2
-  extra_last_calls:
-    - name: FCC Chairman Tom Wheeler
-      number: 202-418-1000
-      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_tom_wheeler.mp3
-    - name: FCC Commissioner Mignon Clyburn
-      number: 202-418-2100
-      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_mignon_clyburn.mp3
-    - name: FCC Commissioner Michael O’Rielly
-      number: 202-418-2300
-      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_michael_oreilly.mp3
-    - name: FCC Commissioner Ajit Pai
-      number: 202-418-2000
-      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_ajit_pai.mp3
-    - name: FCC Commissioner Jessica Rosenworcel
-      number: 202-418-2400
-      intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_jessica_rosenworcel.mp3
+  max_calls_to_congress: 3
 
 - id: comcastmonopoly-roundrobin
   numbers:
