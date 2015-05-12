@@ -263,7 +263,31 @@
       number: 202-418-2400
       intro: http://battleforthenet.s3.amazonaws.com/audio/fcc_jessica_rosenworcel.mp3
 
-
+- id: mass-surveillance
+  numbers:
+    - 920-472-2488
+    - 832-981-2899
+    - 312-487-2769
+    - 312-487-6123
+    - 954-372-8521
+    - 954-378-9720
+    - 405-563-8717
+    - 954-283-7773
+    - 862-666-3016
+  target_house: true
+  target_senate: true
+  target_house_first: false
+  msg_intro: https://d24kjznqej0s8a.cloudfront.net/callcongress/msg_intro.mp3
+  msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt.mp3
+  msg_call_block_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_call_block_intro.mp3
+  msg_rep_intro: We're now connecting you to {{name}}. Press star once you're done.
+  msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
+  msg_final_thanks: https://d24kjznqej0s8a.cloudfront.net/callcongress/msg_final_thanks.mp3
+  randomize_order: true
+  skip_star_confirm: false
+  call_human_check: false
+  only_call_1_rep: true
+  max_calls_to_congress: 3
 
 - id: comcastmonopoly-roundrobin
   numbers:
