@@ -277,12 +277,12 @@
   target_house: true
   target_senate: true
   target_house_first: false
-  msg_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_intro.mp3
+  msg_intro: https://d24kjznqej0s8a.cloudfront.net/callcongress/msg_intro.mp3
   msg_intro_confirm: http://battleforthenet.s3.amazonaws.com/audio/jan14th_prompt.mp3
   msg_call_block_intro: https://battleforthenet.s3.amazonaws.com/audio/mozilla_call_block_intro.mp3
   msg_rep_intro: We're now connecting you to {{name}}. Press star once you're done.
   msg_between_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_between_thanks_2.mp3
-  msg_final_thanks: http://battleforthenet.s3.amazonaws.com/audio/jan14th_msg_final_thanks.mp3
+  msg_final_thanks: https://d24kjznqej0s8a.cloudfront.net/callcongress/msg_final_thanks.mp3
   randomize_order: true
   skip_star_confirm: false
   call_human_check: false
